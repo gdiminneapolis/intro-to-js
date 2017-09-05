@@ -1,0 +1,2175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Intro to JavaScript: Day 1</title>
+
+        <link rel="stylesheet" type="text/css" href="../css/reveal.css">
+        <link rel="stylesheet" type="text/css" href="../prism/prism.css">
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+        <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="../js/reveal.js"></script>
+
+        <script type="text/javascript" src="../prism/prism.js"></script>
+        <script type="text/javascript" src="../js/scripts.js"></script>
+
+        <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    </head>
+
+    <body>
+
+        <div class="reveal" id="gdi">
+
+            <div class="slides">
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- Introduction -->
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <section>
+
+                    <h3 class="uppercase no_margin">Intro to JavaScript</h3>
+                    <div class="meta blue uppercase small_meta">03.04.17 &#8729; GDI MPLS &#8729; Amy Gebhardt</div>
+                    <img src="../images/gdi_logo_badge.png" class="top_margin width_50" style="width:30%;">
+
+                    <div class="spacer"></div>
+
+                    <div class="left_align">
+
+                        <div class="meta white big_meta uppercase">Wifi</div>
+                        <div class="meta gold small_meta">Network: <span class="white"></span></div>
+                        <div class="meta gold small_meta">Password: <span class="white"></span></div>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="no_margin gold">Welcome!</h3>
+
+                </section>
+
+                <section>
+
+                    <h3 class="no_margin gold">You belong here.</h3>
+
+                </section>
+
+                <section class="left_align">
+
+                    <h3 class="no_margin gold">Welcome!</h3>
+
+                    <div class="fragment meta white small_meta">Who are you?</div>
+                    <div class="fragment meta white small_meta">What do you do?</div>
+                    <div class="fragment meta white small_meta">Do you have any experience with JavaScript or programming?</div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="uppercase white">
+                        Slides
+                    </h3>
+
+                    <div class="spacer">
+
+                    </div>
+
+                    <div class="blue meta">
+                        https://gdiminneapolis.github.io/intro-to-js/day-one/
+                    </div>
+
+                </section>
+
+                <section class="left_align">
+
+                    <h3 class="no_margin blue">After today, you will:</h3>
+
+                    <div class="fragment meta white small_meta small_top_margin">Be able to define JavaScript.</div>
+
+                    <div class="fragment meta white small_meta small_top_margin">Understand basic programming concepts such as:</div>
+
+
+                    <div class="indented fragment meta pink small_meta small_top_margin">Variables & data types.</div>
+                    <div class="indented fragment meta pink small_meta small_top_margin">Functions.</div>
+                    <div class="indented fragment meta pink small_meta small_top_margin">Conditional statements.</div>
+                    <div class="indented fragment meta pink small_meta small_top_margin">Loops.</div>
+                    <div class="indented fragment meta pink small_meta small_top_margin">Arrays.</div>
+
+
+                </section>
+
+                <section>
+                    <h3 class="uppercase no_margin gold">get excited.</h3>
+                </section>
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- What is JavaScript? -->
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <section>
+
+                    <div class="spacer"></div>
+
+                    <h3 class="no_margin blue">What is JavaScript?</h3>
+
+                    <section>
+
+                        <div id="server_graphic" class="fragment"></div>
+                        <div class="spacer"></div>
+
+                        <div class="fragment meta white">
+                            A <span class="gold">client-side</span><br />processing language.
+                        </div>
+
+                        <div class="spacer small_spacer"></div>
+
+                        <div class="fragment meta white">
+                            The <span class="gold">browser</span> reads and executes the code.
+                        </div>
+
+                    </section>
+
+
+                    <section>
+
+                        <div id="js_graphic" class="fragment"></div>
+
+                        <div class="spacer"></div>
+
+                        <div class="fragment meta white">Works with <span class="gold">HTML</span> and <span class="gold">CSS</span>.</div>
+                        <div class="spacer"></div>
+
+                        <div class="fragment meta white">Let's you build <span class="gold">dynamic</span><br />web pages that respond to <span class="gold">user input</span>.</div>
+
+                    </section>
+
+                </section>
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- First Code (setting up project files, text editor, + hello world example) -->
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <section>
+
+                    <h3 class="no_margin blue">Your first JavaScript code.</h3>
+
+                </section>
+
+                <section>
+
+                    <h4 class="no_margin blue">Set up some project files:</h4>
+
+                    <span class="spacer big_spacer"></span>
+
+                    <div class="fragment meta white small_meta">
+                        If you have not done so yet, download our project files from: <span class="gold">https://gdiminneapolis.github.io/intro-to-js/gdiIntroToJS.zip</span>
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="fragment meta white small_meta">
+                        Open Atom or Sublime Text, then open your <span class="gold">gdiIntroToJS</span> directory.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="fragment meta white small_meta">
+                        Open this file in Google Chrome. Anything exciting?
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="fragment meta white small_meta">
+                        Add your JavaScript to the <span class="gold">&lt;head&gt;</span> & save again:
+                    </div>
+
+                    <div class="fragment" style="height:385px;">
+                        <pre class="language-markup" data-src="src_samples/first_js_code_html2.html"></pre>
+                        <div style="clear:both;"></div>
+                    </div>
+
+                    <span class="spacer"></span>
+
+                    <div class="fragment meta white tiny_meta">
+                        Refresh your page in Google Chrome. Anything exciting now?
+                    </div>
+
+                </section>
+
+                <section class="left_align">
+
+                    <div class="meta big_meta blue">
+                        Wait, so what did we just do?
+                    </div>
+
+                    <span class="spacer"></span>
+
+                    <div class="fragment small_meta white">
+                        We used a <span class="gold">function</span> named <span class="pink">alert</span>.
+                    </div>
+
+                    <span class="spacer small_spacer"></span>
+
+                    <div class="fragment small_meta white">
+                        We gave the <span class="gold">function</span> a  <span class="gold">string</span> <span class="gold">parameter</span>: <span class="pink">"hello world"</span>.
+                    </div>
+
+                    <span class="spacer big_spacer"></span>
+
+                    <div class="fragment big_meta blue">
+                        For now, just keep in mind that:
+                    </div>
+
+                    <span class="spacer"></span>
+
+                    <div class="fragment white small_meta">
+                        JavaScript must be written within &lt;script&gt; &lt;/script&gt; tags.
+                    </div>
+                    <span class="spacer"></span>
+
+                    <div class="fragment white small_meta">
+                        Using <span class="monaco_font gold">window.alert()</span> is a quick way to output data.
+                    </div>
+
+                </section>
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- External Files -->
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <section>
+
+                    <h4 class="blue">
+                        Just like with CSS, you can put your JavaScript into separate files.
+                    </h4>
+
+                    <div class="spacer"></div>
+
+                    <div class="fragment meta white big_meta">
+                        JavaScript files have a "js" extension.
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="fragment meta white tiny_meta">
+                        Confirm that you see a <span class="gold">scripts.js</span> file in your <span class="gold">gdiIntroToJS</span> directory.
+                    </div>
+
+                    <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
+
+                    <div class="fragment meta white tiny_meta">
+                        Open <span class="gold">index.html</span>, and remove the <span class="gold">&lt;script&gt;</span> tag and its contents.
+                    </div>
+
+                    <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
+
+                    <div class="fragment meta white tiny_meta">
+                        Just above the <span class="gold">&lt;/body&gt;</span> tag, add a new <span class="gold">&lt;script&gt;&lt;/script&gt;</span><br />with a <span class="gold">src</span> attribute
+                        linking to your <span class="gold">scripts.js</span> file.
+                    </div>
+
+                    <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
+
+                    <div class="fragment meta white tiny_meta">
+                        Your <span class="gold">index.html</span> should now look like (don't forget to save!):
+                    </div>
+
+                    <div class="fragment" style="height:205px;">
+                        <pre class="language-markup" data-src="src_samples/first_js_code_html3.html"></pre>
+                        <div style="clear:both;"></div>
+                    </div>
+
+                    <span class="spacer"></span>
+
+                    <div class="fragment meta white tiny_meta" style="position:absolute;width:20%;bottom:10%;right:10%;">
+                        Refresh your page in Google Chrome. Any guesses on what we'll see?
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="meta white meta">
+                        Open to <span class="gold">scripts.js</span> and add the following line:
+                    </div>
+
+                    <div class="fragment skinny_pre" style="height:105px;">
+                        <pre class="language-markup" data-src="src_samples/document_write_hello.js"></pre>
+                        <div style="clear:both;"></div>
+                    </div>
+
+                    <div class="fragment meta white small_meta">
+                        Save the file, then refresh your page in Google Chrome.<br />Any guesses on what we'll see?
+                    </div>
+
+                </section>
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- Displaying Data Review -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                 <section>
+
+                    <h4 class="blue">
+                        Now we know 2 ways of displaying <br />data in JavaScript.
+                    </h4>
+
+                    <span class="spacer"></span>
+
+                    <div class="fragment meta white small_meta">
+                        The last one (for now) requires us to use our "dev tools".
+                    </div>
+
+                </section>
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- Intro to Dev Tools -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <section>
+
+                    <h4 class="blue">
+                        Open your Google Chrome DevTools.
+                    </h4>
+
+                    <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
+
+                    <div class="fragment meta white small_meta">
+                        View -> Developer -> Developer Tools
+                    </div>
+
+                    <span class="spacer"></span>
+
+                    <div class="fragment meta white small_meta">
+                        Open the "console" tab
+                    </div>
+
+                    <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
+
+                    <div class="fragment meta gold small_meta">
+                        Or, if you prefer shortcuts:<br />
+
+                        <span class="white">
+                            Mac: Command + Option + J<br />
+                            Windows: Control + Shift + J
+                        </span>
+
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        Let's get familiar with our dev tools.
+                    </h4>
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        These tools - specifically the console - is your new best friend.
+                    </h4>
+
+                    <div class="meta gold small_meta">
+                        Debugging just got a whole lot easier.
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        More good news:
+                    </h4>
+
+                    <div class="meta gold small_meta">
+                        JavaScript has errors!
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <img src="../images/bug_meme.jpg" style="border:6px solid #fff;width:45%;border-radius:10px;">
+
+                </section>
+
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- Using the Console -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <section>
+
+                    <div class="meta white meta">
+                        Return to <span class="gold">scripts.js</span> and add the following line:
+                    </div>
+
+                    <div class="fragment skinny_pre" style="height:105px;">
+                        <pre class="language-markup" data-src="src_samples/console_error.js"></pre>
+                        <div style="clear:both;"></div>
+                    </div>
+
+                    <div class="fragment meta white small_meta">
+                        Save the file, then refresh your page in Google Chrome.
+                        <br /><br />
+                        <span class="blue">Any guesses on what we'll see?</span>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="meta white meta">
+                        Return to <span class="gold">scripts.js</span> and remove the<br /> line with our intentional bug.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="fragment">
+                        <div class="meta white meta">
+                            Add the following line:
+                        </div>
+
+                        <div class="skinny_pre" style="height:105px;">
+                            <pre class="language-markup" data-src="src_samples/console_hello.js"></pre>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="fragment meta white small_meta">
+                        Save the file, then refresh your page in Google Chrome.<br />Any guesses on what we'll see?
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h4 class="blue">
+                        Now we know 3 ways of displaying <br />data in JavaScript. We used...
+                    </h4>
+
+                    <span class="spacer"></span>
+
+                    <div class="fragment meta white tiny_meta skinny_pre">
+                        <pre class="language-javascript"><code>window.alert();</code></pre>
+                    </div>
+
+                    <span class="spacer tiny_spacer"></span>
+
+                    <div class="fragment meta white tiny_meta skinny_pre">
+                        <pre class="language-javascript"><code>document.write();</code></pre>
+                    </div>
+
+                    <span class="spacer tiny_spacer"></span>
+
+                    <div class="fragment meta white tiny_meta skinny_pre">
+                        <pre class="language-javascript"><code>console.log();</code></pre>
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="spacer"></span>
+
+                    <div class="white meta tiny_meta fragment">
+                        We'll dive into the details of what these are actually doing<br />a bit later, just keep them in your back pocket for now.
+                    </div>
+
+                </section>
+
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- Basic Programming Vocab -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <section>
+
+                    <div class="meta white meta">
+                        Programming languages use a set of rules <br /> for correct structure. This is called <span class="gold">SYNTAX</span>.
+                    </div>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white meta fragment">
+                        Incorrect syntax will cause <span class="gold">ERRORS</span>.
+                    </div>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white meta fragment">
+                        Syntax varies <span class="blue">significantly</span> from language to language.
+                    </div>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white fragment">
+                        A <span class="gold">STATEMENT</span> is an instruction.
+                        <div class="spacer tiny_spacer"></div>
+
+                        <div class="meta tiny_meta blue">
+                            window.alert('hello world')
+                        </div>
+                    </div>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white meta fragment">
+                        JavaScript syntax requires each <br /> statement to end with a <span class="gold uppercase">semicolon</span>.
+                    </div>
+
+                </section>
+
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- Code Comments -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <section>
+                    <h2 class="blue uppercase">code comments</h2>
+                </section>
+
+                <section>
+
+                    <div class="meta white meta">
+                        Just like other languages, JavaScript allows you to leave <span class="gold uppercase">comments</span> within the code.
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="meta white meta fragment">
+                        Comments are ignored when the code is run.
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="meta white meta fragment">
+                        In JavaScript, there are 2 ways to write a comment:
+                    </div>
+
+
+                    <div class="fragment meta white tiny_meta" style="height:220px;">
+                        <pre class="language-markup" data-src="src_samples/comments.js"></pre>
+                    </div>
+
+
+                </section>
+
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- Variables -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <section>
+                    <h2 class="blue uppercase">variables</h2>
+                </section>
+
+                <section>
+
+                    <h3 class="white">
+                        A <span class="gold">VARIABLE</span> stores values.
+                    </h3>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        It can hold different types of information, like <br />words and numbers. These are called <span class="gold">DATA TYPES</span><br /> and there are quite a few of them.
+                    </div>
+
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        The <span class="blue">value</span> can change.
+                    </div>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        A variable can have a <span class="blue">null</span> value <br />which means it is not currently storing anything.
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="white">
+                        A <span class="gold">VARIABLE</span> stores values.
+                    </h3>
+
+                    <div class="spacer big_spacer"></div>
+
+
+                    <div class="meta white big_meta">
+                        When you create a variable you <span class="gold">DECLARE</span> it.
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        A variable has an <span class="blue">undefined</span> value <br /> if it is declared without setting a value.
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        New variables must have a unique name.
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        Variable names can only contain letters, numbers, $, or _.
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        Variable names cannot begin with a number.
+                    </div>
+
+                </section>
+
+                <section class="left_align">
+
+                    <div class="spacer big_spacer"></div>
+
+                    <h4 class="uppercase blue">Best Practices</h4>
+
+                    <div class="spacer"></div>
+
+                    <section>
+
+                        <div class="big_meta white">"You should not be able <br />to tell who wrote the code."</div>
+
+                    </section>
+
+                    <section>
+
+                        <div class="spacer big_spacer"></div>
+
+                        <div class="small_meta white">Know what they are: <a href="http://www.thinkful.com/learn/javascript-best-practices-1/#Avoid-Mixing-with-Other-Technologies">JS Best Practices</a></div>
+                        <div class="fragment small_meta white small_top_margin">Follow style guide & coding conventions: <a href="http://addyosmani.com/blog/javascript-style-guides-and-beautifiers/">JS Style Guides</a></div>
+                        <div class="fragment small_meta white small_top_margin">Code can have bad style, but have correct syntax.</div>
+                        <div class="fragment small_meta white small_top_margin">If you prefer a style that isn't widely accepted, have a reason for it.</div>
+                        <div class="fragment small_meta white small_top_margin">Be consistent within your own code.</div>
+                        <div class="fragment small_meta white small_top_margin">Today, I'm going to stick as close to the common standard as possible.</div>
+
+                        <div class="spacer big_spacer"></div>
+
+
+                    </section>
+
+
+                    <section>
+
+                        <div class="meta white">In JavaScript (and several other languages), variable names can follow different naming conventions: </div>
+
+                        <div class="spacer"></div>
+
+
+                        <div class="fragment small_meta white small_top_margin indented">
+                            Camel Case: <span class="monaco_font pink">thisIsAnExample</span>
+                        </div>
+
+                        <div class="fragment small_meta white small_top_margin indented">
+                            Pascal Case: <span class="monaco_font pink">ThisIsAnExample</span>
+                        </div>
+
+                        <div class="fragment small_meta white small_top_margin indented">
+                            Underscores: <span class="monaco_font pink">this_is_an_example</span>
+                        </div>
+
+                    </section>
+
+                </section>
+
+                <section>
+                    <table>
+
+                        <tr class="header_row">
+                            <td>variable</td>
+                            <td>value</td>
+                        </tr>
+
+                        <tr>
+                            <td>First Name</td>
+                            <td>Amy</td>
+                        </tr>
+
+                        <tr>
+                            <td>Twitter Handle</td>
+                            <td>@amlyhamm</td>
+                        </tr>
+
+                        <tr>
+                            <td>Birthday Month</td>
+                            <td>8</td>
+                        </tr>
+
+                        <tr>
+                            <td>Love for JavaScript</td>
+                            <td>9.99993</td>
+                        </tr>
+
+                        <tr>
+                            <td>Is a developer?</td>
+                            <td>Yes</td>
+                        </tr>
+
+                    </table>
+                </section>
+
+                <section>
+
+                    <h3 class="white">
+                        Let's start with <span class="blue">First Name</span>
+                    </h3>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white big_meta fragment">
+                        Come up with a <span class="gold">name</span> for the variable.
+                    </div>
+
+                    <div class="fragment meta white tiny_meta skinny_pre">
+                        <pre class="language-javascript"><code>firstName</code></pre>
+                    </div>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white big_meta fragment">
+                        <span class="gold">Declare</span> it using proper syntax.
+                    </div>
+
+                    <div class="fragment meta white tiny_meta skinny_pre">
+                        <pre class="language-javascript"><code>var firstName;</code></pre>
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="meta tiny_meta white fragment">
+                        Right now, <span class="blue monaco_font">firstName</span> has an <span class="blue monaco_font">undefined</span> value.
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="meta white big_meta">
+                        <span class="gold">Initialize</span> <span class="blue monaco_font">firstName</span> with a value:
+                    </div>
+
+                    <div class="fragment meta white tiny_meta skinny_pre">
+                        <pre class="language-javascript"><code>var firstName = "Amy";</code></pre>
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="meta small_meta white fragment">
+                        Note that the value is in quotes.<br /><br />This is because the value is a <span class="gold">STRING</span><br /> and therefore
+                        <span class="blue monaco_font">firstName</span> is a string.
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="spacer big_spacer"></div>
+                    <div class="spacer"></div>
+
+                    <div class="meta white big_meta">
+                        <span class="gold">DATA TYPES</span> we'll be working with for this example include:
+                    </div>
+
+                    <section>
+                        <div class="spacer"></div>
+
+                        <div class="meta blue uppercase">
+                            strings
+                        </div>
+                        <div class="meta tiny_meta white fragment skinny_pre">
+                            <pre class="language-markup" data-src="src_samples/strings.js"></pre>
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <div class="spacer"></div>
+
+                        <div class="meta blue uppercase">
+                            integers
+                        </div>
+                        <div class="meta tiny_meta white skinny_pre">
+                            <pre class="language-markup" data-src="src_samples/ints.js"></pre>
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <div class="spacer"></div>
+
+                        <div class="meta blue uppercase">
+                            floats
+                        </div>
+                        <div class="meta tiny_meta white skinny_pre">
+                            <pre class="language-markup" data-src="src_samples/floats.js"></pre>
+                        </div>
+
+                    </section>
+
+                    <section>
+
+                        <div class="meta blue uppercase">
+                            booleans
+                        </div>
+                        <div class="meta tiny_meta white skinny_pre">
+                            <pre class="language-markup" data-src="src_samples/booleans.js"></pre>
+                        </div>
+
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <table>
+
+                        <tr class="header_row">
+                            <td>variable</td>
+                            <td>value</td>
+                        </tr>
+
+                        <tr>
+                            <td>First Name</td>
+                            <td>Amy</td>
+                        </tr>
+
+                        <tr>
+                            <td>Twitter Handle</td>
+                            <td>@amlyhamm</td>
+                        </tr>
+
+                        <tr>
+                            <td>Birthday Month</td>
+                            <td>8</td>
+                        </tr>
+
+                        <tr>
+                            <td>Love for JavaScript</td>
+                            <td>9.99993</td>
+                        </tr>
+
+                        <tr>
+                            <td>Is a developer?</td>
+                            <td>Yes</td>
+                        </tr>
+
+                    </table>
+
+                </section>
+
+                <section>
+
+                    <div class="meta white big_meta">
+                        To <span class="gold">declare</span> and <span class="gold">initialize</span> <br />each of these it <i>could</i> look like:
+                    </div>
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:200px;">
+                        <pre class="language-markup" data-src="src_samples/variables_all.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="meta white big_meta">
+                        To <span class="gold">use</span> your variables, simply refer to the name of the variable in your code:
+                    </div>
+
+                    <div class="fragment meta white tiny_meta" style="height:200px;">
+                        <pre class="language-markup" data-src="src_samples/use_variable.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="blue">
+                    Let's try it!
+                    </h3>
+
+                    <span class="spacer big_spacer"></span>
+
+                    <div class="meta white meta">
+                        Return to your <span class="gold">scripts.js</span>.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Create a variable.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Give it a valid name and a value.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Display the value.
+                    </div>
+
+                    <div class="js_fiddle_link">
+                        <a class="logo" href="https://jsfiddle.net/h6bbch5n/" target="_blank">See a solution</a>
+                    </div>
+
+                </section>
+
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- Operators -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <section>
+                    <h2 class="blue uppercase">operators</h2>
+                </section>
+
+                <section>
+
+                    <h3 class="white">
+                        <span class="gold">OPERATORS</span> are used to perform arithmetic between variables.
+                    </h3>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        The variables' <span class="gold uppercase">DATA TYPE</span> will <br />determine <i>what</i> the operator actually does.
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="white">
+                        When used on numbers:
+                    </h3>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <table class="wide_table">
+
+                        <tr class="header_row">
+                            <td>Operator</td>
+                            <td>Description</td>
+                            <td>Result</td>
+                        </tr>
+
+                        <tr>
+                            <td>a + b</td>
+                            <td>Addition</td>
+                            <td>Sum of a and b</td>
+                        </tr>
+
+                        <tr>
+                            <td>a - b</td>
+                            <td>Subtraction</td>
+                            <td>Difference of a and b</td>
+                        </tr>
+
+                        <tr>
+                            <td>a * b</td>
+                            <td>Multiplication</td>
+                            <td>Product of a and b.</td>
+                        </tr>
+
+                        <tr>
+                            <td>a / b</td>
+                            <td>Division</td>
+                            <td>Quotient of a and b</td>
+                        </tr>
+
+                        <tr>
+                            <td>a % b</td>
+                            <td>Modulus</td>
+                            <td>Remainder of a divided by b</td>
+                        </tr>
+
+                        <tr>
+                            <td>a++</td>
+                            <td>Increment</td>
+                            <td>Increases a by 1</td>
+                        </tr>
+
+                        <tr>
+                            <td>a--</td>
+                            <td>Decrement</td>
+                            <td>Decreases a by 1</td>
+
+                        </tr>
+
+
+                    </table>
+
+                </section>
+
+                <section>
+
+                    <h3 class="white">
+                        <span class="gold">operator</span> example:
+                    </h3>
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:220px;">
+                        <pre class="language-markup" data-src="src_samples/number_operators.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="blue">
+                        Let's try it!
+                    </h3>
+
+                    <span class="spacer big_spacer"></span>
+
+                    <div class="meta white meta">
+                        Return to your <span class="gold">scripts.js</span>.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Create 3 variables with valid names <br />and <span class="gold">integer</span> or <span class="gold">float</span> values.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Try some arithmetic operators.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Display your results!
+                    </div>
+
+                    <div class="js_fiddle_link">
+                        <a class="logo" href="http://jsfiddle.net/nzw3rmy0/" target="_blank">See a solution</a>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="white">
+                        The <span class="gold">+ operator</span> can be used to perform concatenation between <span class="gold">string</span> variables.
+                    </h3>
+
+                </section>
+
+                <section>
+
+                    <h3 class="white">
+                        <span class="gold">concatenation</span> example:
+                    </h3>
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:220px;">
+                        <pre class="language-markup" data-src="src_samples/concatenation.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="white">
+                        you can also use <span class="gold">+=</span> to add to the end of a string:
+                    </h3>
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:220px;">
+                        <pre class="language-markup" data-src="src_samples/increment_string.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="blue">
+                        Let's try it!
+                    </h3>
+
+                    <span class="spacer big_spacer"></span>
+
+                    <div class="meta white meta">
+                        Return to your <span class="gold">scripts.js</span>.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Create 3 variables with <span class="gold">string</span> values: a first name, middle initial, and a last name.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Put them together to make a full name.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Display your results!
+                    </div>
+
+                    <div class="js_fiddle_link">
+                        <a class="logo" href="http://jsfiddle.net/5Lba5svu/" target="_blank">See a solution</a>
+                    </div>
+
+                </section>
+
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- Functions -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <section>
+                    <h2 class="blue uppercase">functions</h2>
+                </section>
+
+                <section>
+
+                    <h3 class="white">
+                        A <span class="gold">FUNCTION</span> is a reusable block of code designed to perform a particular task.
+                    </h3>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        It is <span class="gold">INVOKED</span> when something calls it.
+                    </div>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        Functions have <span class="gold">NAMES</span> and are <span class="gold">DECLARED</span> like variables.
+                    </div>
+
+
+                </section>
+
+                <section>
+
+                    <div class="white meta">
+                        An example of a <span class="gold">FUNCTION</span>:
+                    </div>
+
+                    <div class="meta white tiny_meta skinny_pre" style="height:390px;">
+                        <pre class="language-markup" data-src="src_samples/first_function.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="white meta">
+                        Functions can accept <span class="gold uppercase">arguments</span>.
+                    </div>
+
+                    <div class="spacer big_spacer"></div>
+
+
+                    <div class="fragment white meta">
+                        These <span class="gold uppercase">parameters</span> are part <br />of the function's <span class="gold uppercase">signature</span>.
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:220px;">
+                        <pre class="language-markup" data-src="src_samples/include_parameters.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="white meta">
+                        You can use variables as <span class="gold">ARGUMENTS</span>.
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:220px;">
+                        <pre class="language-markup" data-src="src_samples/variables_as_arguments.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="blue">
+                        Let's try it!
+                    </h3>
+
+                    <span class="spacer big_spacer"></span>
+
+                    <div class="meta white meta">
+                        Return to your <span class="gold">scripts.js</span>.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Create a function named <span class="monaco_font gold">getBirthday</span> that <br />accepts 3 parameters: <span class="monaco_font gold">month</span>, <span class="monaco_font gold">day</span>, and <span class="monaco_font gold">year</span>.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Have the function display a <br />birthday date, based on the arguments.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Call the function to display your results!
+                    </div>
+
+                    <div class="js_fiddle_link">
+                        <a class="logo" href="http://jsfiddle.net/o0w12nfv/" target="_blank">See a solution</a>
+                    </div>
+
+
+                </section>
+
+                <section>
+
+                    <div class="white meta">
+                        Functions can <span class="gold">RETURN</span> values.
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="fragment white meta">
+                        Returning will immediately end the function.
+                    </div>
+                    <div class="spacer"></div>
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:310px;">
+                        <pre class="language-markup" data-src="src_samples/returning.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="blue">
+                        Let's try it!
+                    </h3>
+
+                    <span class="spacer big_spacer"></span>
+
+                    <div class="meta white meta">
+                        Return to your <span class="gold">scripts.js</span>.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Have your <span class="monaco_font gold">getBirthday</span> function <span class="gold">return</span> the result (instead of just displaying).
+
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Call the function and set its <br />return value to a new variable.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Display that value of that variable.
+                    </div>
+
+                    <div class="js_fiddle_link">
+                        <a class="logo" href="http://jsfiddle.net/7vg1brvo/" target="_blank">See a solution</a>
+                    </div>
+
+                </section>
+
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- Scope -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <section>
+                    <h2 class="blue uppercase">scope</h2>
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        <span class="gold uppercase">scope</span> is the set of variables and functions you have access to.
+                    </h4>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <h4 class="white fragment">
+                        Scope can be <span class="gold uppercase">global</span> and <span class="gold uppercase">local</span>.
+                    </h4>
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        Variables declared <i>within</i> a function become <span class="gold uppercase">local</span> to the function.
+                    </h4>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        This means they can only be accessed within the function.
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        They are deleted when the function is completed.
+                    </div>
+
+
+                    <div class="spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        Function parameters work as local variables.
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        Variables declared <i>outside</i> a function become <span class="gold uppercase">global</span>.
+                    </h4>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        This means they can be accessed <br />by all scripts and functions on a web page.
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        They are deleted when you close the web page.
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        If you assign a value to variable that has not been declared, it will automatically become a global variable.
+                    </div>
+
+
+                </section>
+
+                <section>
+
+                    <div class="meta blue small_meta fragment">
+                        Which variables have <span class="monaco_font white uppercase">global</span> scope?
+                    </div>
+
+                    <span class="spacer"></span>
+
+                    <div class="meta blue small_meta fragment">
+                        Which variables have <span class="monaco_font white uppercase">local</span> scope?
+                    </div>
+
+                    <span class="spacer"></span>
+
+                    <div class="meta white tiny_meta skinny_pre" style="height:400px;">
+                        <pre class="language-markup" data-src="src_samples/scope.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="blue">
+                        Let's try it!
+                    </h3>
+
+                    <span class="spacer big_spacer"></span>
+
+                    <div class="meta white meta">
+                        Return to your <span class="gold">scripts.js</span>.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Create a variable that has <span class="monaco_font gold">local</span> scope.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        Try to access it from outside of its scope.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white meta">
+                        What happens?
+                    </div>
+
+                    <div class="js_fiddle_link">
+                        <a class="logo" href="http://jsfiddle.net/yqafp0ha/" target="_blank">See a solution</a>
+                    </div>
+
+                </section>
+
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- Conditionals -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <section>
+                    <h2 class="blue uppercase">conditional statements</h2>
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        <span class="gold uppercase">conditional statements</span> are used to execute different blocks of code based on conditions.
+                    </h4>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        The syntax looks like this:
+                    </div>
+
+                    <div class="fragment meta white tiny_meta" style="height:400px;">
+                        <pre class="language-markup" data-src="src_samples/conditional_syntax.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        This is where our <span class="gold uppercase">boolean</span> data types will come in handy.
+                    </h4>
+
+                    <div class="spacer"></div>
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:400px;">
+                        <pre class="language-markup" data-src="src_samples/conditional_example_one.js"></pre>
+                    </div>
+
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        We'll use a bunch of <span class="gold uppercase">comparison operators</span> with conditional statements.
+                    </h4>
+
+                    <section>
+                        <div class="spacer big_spacer"></div>
+
+                        <table class="wide_table">
+
+                            <tr class="header_row">
+                                <td>Operator</td>
+                                <td>Description</td>
+                                <td>Result</td>
+                            </tr>
+
+                            <tr>
+                                <td>a == b</td>
+                                <td>Equal</td>
+                                <td><span class="monaco_font">true</span> if <span class="monaco_font">a</span> and <span class="monaco_font">b</span> have the same value.</td>
+                            </tr>
+
+                            <tr>
+                                <td>a === b</td>
+                                <td>Identical</td>
+                                <td><span class="monaco_font">true</span> if <span class="monaco_font">a</span> and <span class="monaco_font">b</span> have the same value and the same type.</td>
+                            </tr>
+
+                            <tr>
+                                <td>a != b</td>
+                                <td>Not equal</td>
+                                <td><span class="monaco_font">true</span> if <span class="monaco_font">a</span> and <span class="monaco_font">b</span> do not have the same value.</td>
+                            </tr>
+
+                            <tr>
+                                <td>a !== b</td>
+                                <td>Not identical</td>
+                                <td><span class="monaco_font">true</span> if <span class="monaco_font">a</span> and <span class="monaco_font">b</span> do not have the same value or do not have the same type.</td>
+                            </tr>
+
+
+                        </table>
+
+                    </section>
+
+                    <section>
+                        <div class="spacer"></div>
+
+                        <table class="wide_table">
+
+                            <tr class="header_row">
+                                <td>Operator</td>
+                                <td>Description</td>
+                                <td>Result</td>
+                            </tr>
+
+                            <tr>
+                                <td>a < b</td>
+                                <td>Less than</td>
+                                <td><span class="monaco_font">true</span> if <span class="monaco_font">a</span> is less than <span class="monaco_font">b</span>.</td>
+                            </tr>
+
+                            <tr>
+                                <td>a > b</td>
+                                <td>Greater than</td>
+                                <td><span class="monaco_font">true</span> if <span class="monaco_font">a</span> is greater than <span class="monaco_font">b</span>.</td>
+                            </tr>
+
+                            <tr>
+                                <td>a <= b</td>
+                                <td>Less than or equal to</td>
+                                <td><span class="monaco_font">true</span> if <span class="monaco_font">a</span> is less than or equal to <span class="monaco_font">b</span>.</td>
+                            </tr>
+
+                            <tr>
+                                <td>a >= b</td>
+                                <td>Greater than or equal to</td>
+                                <td><span class="monaco_font">true</span> if <span class="monaco_font">a</span> is greater than or equal to <span class="monaco_font">b</span>.</td>
+                            </tr>
+
+
+                        </table>
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        Pay special attention to the <span class="gold monaco_font">==</span>/<span class="gold monaco_font">===</span> operators! It's easy to want to use <span class="gold monaco_font">=</span>,<br />but that <i>assigns</i> a value, it doesn't <i>compare</i> a value.
+                    </h4>
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        The <span class="gold uppercase">else statement</span> is a block of code executed if the condition is false.
+                    </h4>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        The syntax looks like this:
+                    </div>
+
+                    <div class="fragment meta white tiny_meta" style="height:400px;">
+                        <pre class="language-markup" data-src="src_samples/conditional_syntax_else.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="blue">
+                        Let's try it together!
+                    </h3>
+
+
+                    <h4>
+                        What will be logged in the console?
+                    </h4>
+
+                    <section>
+
+                        <span class="spacer big_spacer"></span>
+
+                        <div class="meta white tiny_meta skinny_pre" style="height:290px;">
+                            <pre class="language-markup" data-src="src_samples/conditional_operators/1.js"></pre>
+                        </div>
+
+                        <div class="fragment tiny_meta gold">
+                        <img src="../images/true.png">
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <span class="spacer big_spacer"></span>
+
+                        <div class="meta white tiny_meta skinny_pre" style="height:290px;">
+                            <pre class="language-markup" data-src="src_samples/conditional_operators/2.js"></pre>
+                        </div>
+
+                        <div class="fragment tiny_meta gold">
+                            <img src="../images/true.png">
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <span class="spacer big_spacer"></span>
+
+                        <div class="meta white tiny_meta skinny_pre" style="height:290px;">
+                            <pre class="language-markup" data-src="src_samples/conditional_operators/3.js"></pre>
+                        </div>
+
+                        <div class="fragment tiny_meta gold">
+                            <img src="../images/false.png">
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <span class="spacer big_spacer"></span>
+
+                        <div class="meta white tiny_meta skinny_pre" style="height:290px;">
+                            <pre class="language-markup" data-src="src_samples/conditional_operators/4.js"></pre>
+                        </div>
+
+                        <div class="fragment tiny_meta gold">
+                            <img src="../images/true.png">
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <span class="spacer big_spacer"></span>
+
+                        <div class="meta white tiny_meta skinny_pre" style="height:290px;">
+                            <pre class="language-markup" data-src="src_samples/conditional_operators/5.js"></pre>
+                        </div>
+
+                        <div class="fragment tiny_meta gold">
+                            <img src="../images/false.png">
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <span class="spacer big_spacer"></span>
+
+                        <div class="meta white tiny_meta skinny_pre" style="height:290px;">
+                            <pre class="language-markup" data-src="src_samples/conditional_operators/6.js"></pre>
+                        </div>
+
+                        <div class="fragment tiny_meta gold">
+                            <img src="../images/true.png">
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <span class="spacer big_spacer"></span>
+
+                        <div class="meta white tiny_meta skinny_pre" style="height:290px;">
+                            <pre class="language-markup" data-src="src_samples/conditional_operators/7.js"></pre>
+                        </div>
+
+                        <div class="fragment tiny_meta gold">
+                            <img src="../images/true.png">
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <span class="spacer big_spacer"></span>
+
+                        <div class="meta white tiny_meta skinny_pre" style="height:290px;">
+                            <pre class="language-markup" data-src="src_samples/conditional_operators/8.js"></pre>
+                        </div>
+
+                        <div class="fragment tiny_meta gold">
+                            <img src="../images/true.png">
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <span class="spacer big_spacer"></span>
+
+                        <div class="meta white tiny_meta skinny_pre" style="height:290px;">
+                            <pre class="language-markup" data-src="src_samples/conditional_operators/9.js"></pre>
+                        </div>
+
+
+                        <div class="fragment tiny_meta gold">
+                            <img src="../images/true.png">
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <span class="spacer big_spacer"></span>
+
+                        <div class="meta white tiny_meta skinny_pre" style="height:290px;">
+                            <pre class="language-markup" data-src="src_samples/conditional_operators/10.js"></pre>
+                        </div>
+
+                        <div class="fragment tiny_meta gold">
+                            <img src="../images/false.png">
+                        </div>
+
+                    </section>
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        Use the <span class="gold uppercase">else if statement</span> to <br /> specify a new condition if the previous condition is false.
+                    </h4>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        The syntax looks like this:
+                    </div>
+
+                    <div class="fragment meta white tiny_meta" style="height:400px;">
+                        <pre class="language-markup" data-src="src_samples/conditional_syntax_else_if.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h4 class="blue">
+                        Let's try it!
+                    </h4>
+
+                    <span class="spacer"></span>
+
+                    <div class="meta white tiny_meta">
+                        Return to your <span class="gold">scripts.js</span>.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white tiny_meta">
+                        Create a variable named <span class="monaco_font gold">age</span> & give it a float value.
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white tiny_meta">
+
+                        Display the name of the age group the number falls into based on the following:
+                        <span class="spacer"></span>
+
+                        <table class="small_font_table">
+
+                            <tr class="header_row">
+                                <td>age</td>
+                                <td>group name</td>
+                            </tr>
+
+                            <tr>
+                                <td>less than 1</td>
+                                <td>infant</td>
+                            </tr>
+
+                            <tr>
+                                <td>1-3</td>
+                                <td>toddler</td>
+                            </tr>
+
+                            <tr>
+                                <td>4-11</td>
+                                <td>child</td>
+                            </tr>
+
+                            <tr>
+                                <td>12</td>
+                                <td>preteen</td>
+                            </tr>
+
+                            <tr>
+                                <td>13-18</td>
+                                <td>teenager</td>
+                            </tr>
+
+                            <tr>
+                                <td>greater than or equal to 18</td>
+                                <td>adult</td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <span class="spacer"></span>
+                    <span class="divider"></span>
+                    <span class="spacer"></span>
+
+                    <div class="meta white tiny_meta">
+                        Try a bunch of different values for age and display each result.
+                    </div>
+
+                    <div class="js_fiddle_link">
+                        <a class="logo" href="http://jsfiddle.net/ons4f2kc/" target="_blank">See a solution</a>
+                    </div>
+
+
+                </section>
+
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- Logical Operators -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <section>
+                    <h2 class="blue uppercase">logical operators</h2>
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        <span class="gold uppercase">logical operators</span> determine what happens between variables or values.
+                    </h4>
+
+                    <div class="spacer"></div>
+
+
+                    <div class="meta white small_meta fragment">
+                        Given that:
+                    </div>
+
+                    <div class="fragment meta white tiny_meta skinny_pre">
+                        <pre class="language-javascript">a = 1;
+b = 2;</pre>
+                    </div>
+
+                    <div class="spacer"></div>
+
+
+                    <table class="wide_table fragment">
+
+                        <tr class="header_row">
+                            <td>Operator</td>
+                            <td>Description</td>
+                            <td>Example</td>
+                            <td>Result</td>
+                        </tr>
+
+                        <tr>
+                            <td>&&</td>
+                            <td>And</td>
+
+                            <td>(a < 3) && (b == 2)</td>
+                            <td><span class="monaco_font fragment">true</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>||</td>
+                            <td>Or</td>
+                            <td>(a == 5) || (b == 5)</td>
+                            <td><span class="monaco_font fragment">false</span>
+                        </tr>
+
+                        <tr>
+                            <td>!</td>
+                            <td>Not</td>
+
+                            <td>!(a == b)</td>
+                            <td><span class="monaco_font fragment">true</span>
+                        </tr>
+
+                    </table>
+
+                </section>
+
+                <section>
+
+                    <div class="meta white small_meta">
+                        Now you can combine conditions!
+                    </div>
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:540px;">
+                        <pre class="language-markup" data-src="src_samples/logical_operators.js"></pre>
+                    </div>
+
+                    <div class="meta gold tiny_meta fragment">
+                        This can be simplified. Any ideas?
+                    </div>
+
+                </section>
+
+
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- Loops -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <section>
+                    <h2 class="blue uppercase">loops</h2>
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        A <span class="gold uppercase">while loop</span> will repeat the same block of code over and over again until the condition is met.
+                    </h4>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        The syntax looks like this:
+                    </div>
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:400px;">
+                        <pre class="language-markup" data-src="src_samples/while_syntax.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="fragment meta white tiny_meta" style="height:456px;">
+                        <pre class="language-markup" data-src="src_samples/while_beer_example.js"></pre>
+                    </div>
+
+                    <div class="meta white small_meta fragment">
+                        How many times will the block of <br/> code within the loop be executed?
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h3 class="white">
+                        An <span class="gold uppercase">infinite loop</span> occurs when the condition to <span class="gold uppercase">break</span> out of the loop can never happen.
+                    </h3>
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:226px;">
+                        <pre class="language-markup" data-src="src_samples/infinite_loop.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        A <span class="gold uppercase">for loop</span> will repeat the same block of code over and over until the counter condition is met.
+                    </h4>
+
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        The syntax looks like this:
+                    </div>
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:400px;">
+                        <pre class="language-markup" data-src="src_samples/for_syntax.js"></pre>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        Brief detour...
+                    </h4>
+
+                    <div class="spacer"></div>
+
+                    <pre class="language-markup">var; <span class="white">// what we've been using; behavior can feel unpredictable; older standard</span></pre>
+                    <pre class="language-markup">let; <span class="white">// block-scoped; value may be reassigned; newer standard</span></pre>
+                    <pre class="language-markup">const <span class="white">// block-scoped; can not be reassigned; newer standard</span></pre>
+                    <div class="spacer big_spacer"></div>
+
+                    <div class="meta white fragment">
+                        More info:
+                        <a href="https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75#.kgnywsk53" target="_new">
+                            JavaScript ES6+: var, let, or const?
+                        </a>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="meta white small_meta">
+                        What will the value of <span class="monaco_font gold">lyrics</span> be?
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="meta blue tiny_meta fragment">
+                        Let's step through it together.
+                    </div>
+
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:456px;">
+                        <pre class="language-markup" data-src="src_samples/potato_for_loop.js"></pre>
+                    </div>
+
+                    <div class="js_fiddle_link">
+                        <a class="logo" href="http://jsfiddle.net/xskddg29/" target="_blank">See it in action</a>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        To exit a loop before the condition is met, use the <span class="gold uppercase">break</span> statement.
+                    </h4>
+
+                    <div class="fragment meta white tiny_meta skinny_pre" style="height:376px;">
+                        <pre class="language-markup" data-src="src_samples/break_example.js"></pre>
+                    </div>
+
+                    <div class="meta white small_meta fragment">
+                        How many times will the loop be executed?
+                    </div>
+
+
+                    <div class="meta gold tiny_meta fragment">
+                        When <span class="monaco_font">i === 105</span>, the loop will break (the 6th execution)
+                    </div>
+
+                </section>
+
+                <section class="left_align">
+
+                    <h4 class="blue">
+                        Let's try it!
+                    </h4>
+
+                    <span class="spacer"></span>
+
+                    <div class="meta white small_meta">
+                        Return to your <span class="gold">scripts.js</span>.
+                    </div>
+
+                    <span class="spacer"></span>
+
+                    <div class="meta white small_meta">
+                        Write a loop that gives you the 9's times table, so your output looks like:
+                    </div>
+
+                    <div class="meta pink tiny_meta indented">
+                        <div class="small_top_margin">9 x 1 = 9</div>
+                        <div class="">9 x 2 = 18</div>
+                        <div class="">9 x 3 = 27</div>
+                        <div class="">...</div>
+                        <div class="">9 x 12 = 108</div>
+                    </div>
+
+                    <span class="spacer"></span>
+
+                    <div class="meta blue small_meta">
+                        Finish early?
+                    </div>
+
+                    <div class="meta white tiny_meta">
+                        Write a loop that will display the times table for numbers 1-12. The output looks like:
+                    </div>
+
+                    <div class="meta pink tiny_meta indented">
+                        <div class="small_top_margin">1 x 1 = 1</div>
+                        <div class="">1 x 2 = 2</div>
+                        <div class="">1 x 3 = 3</div>
+                        <div class="">...</div>
+                        <div class="">1 x 12 = 12</div>
+                        <div class="">2 x 1 = 2</div>
+                        <div class="">2 x 2 = 4</div>
+                        <div class="">...</div>
+                        <div class="">12 x 12 = 144</div>
+                    </div>
+
+                    <div class="js_fiddle_link">
+                        <div class="spacer"></div><br />
+                        <a class="logo" href="http://jsfiddle.net/6jtzj5yd/1/" target="_blank">See a solution for the 9's times table</a><br />
+                        <a class="logo" href="http://jsfiddle.net/6jtzj5yd/2/" target="_blank">See a solution for the 1-12 times table</a>
+                    </div>
+
+
+                </section>
+                
+
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- End of Day One -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <section>
+                    <h2 class="blue uppercase">Questions?</h2>
+                </section>
+
+            </div>
+
+            <footer>
+
+                <div id="twitter">
+                    <img src="../images/twitter.png">
+                    @GDImpls &#8729; @amlyhamm &#8729; #introToJS
+                </div>
+
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>
