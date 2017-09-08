@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Intro to JavaScript: Day 2</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/reveal.css">
+    <link rel="stylesheet" type="text/css" href="../prism/prism.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/reveal.js"></script>
+
+    <script type="text/javascript" src="../prism/prism.js"></script>
+    <script type="text/javascript" src="../js/scripts.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+
+<div class="reveal" id="gdi">
+
+    <div class="slides">
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Introduction -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->     
+        <section>
+
+            <h3 class="uppercase no_margin">Intro to JavaScript</h3>
+            <div class="meta blue uppercase small_meta">03.05.17 &#8729; GDI MPLS &#8729; Amy Gebhardt</div>
+            <img src="../images/gdi_logo_badge.png" class="top_margin width_50" style="width:30%;">
+
+            <div class="spacer"></div>
+
+            <div class="left_align">
+
+                <div class="meta white big_meta uppercase">Wifi</div>
+                <div class="meta gold small_meta">Network: <span class="white"></span></div>
+                <div class="meta gold small_meta">Password: <span class="white"></span></div>
+
+            </div>
+
+        </section>
+
+        <section class="left_align">
+
+            <h3 class="uppercase no_margin gold">Welcome to Day 2!</h3>
+
+        </section>
+
+        <section>
+
+            <h3 class="uppercase white">
+                Slides
+            </h3>
+
+            <div class="spacer">
+
+            </div>
+
+            <div class="blue meta">
+                https://gdiminneapolis.github.io/intro-to-js/day-two
+            </div>
+
+        </section>
+
+        <section class="left_align">
+
+            <h3 class="no_margin blue">After today, you will:</h3>
+
+            <div class="fragment meta white small_meta small_top_margin">Be able to work with Arrays & Objects.</div>
+
+            <div class="fragment meta white small_meta small_top_margin">Mess with the DOM in JavaScript:</div>
+
+            <div class="indented fragment meta pink small_meta small_top_margin">Select elements.</div>
+            <div class="indented fragment meta pink small_meta small_top_margin">Manipulate attributes and styles.</div>
+            <div class="indented fragment meta pink small_meta small_top_margin">Change the HTML within an element & create new elements.</div>
+            <div class="indented fragment meta pink small_meta small_top_margin">Respond to events.</div>
+
+            <div class="fragment meta white small_meta small_top_margin">Build a photo gallery.</div>
+
+        </section>
+
+        <section>
+            <h3 class="uppercase no_margin gold">get excited.</h3>
+        </section>
+
+
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Arrays -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->    
+        <section>
+            <h2 class="blue uppercase">arrays</h2>
+        </section>
+
+        <section>
+
+            <h4 class="white">
+                An <span class="gold uppercase">array</span> is a special variable that <br />can old multiple values of varying data types at a time.
+            </h4>
+
+            <div class="spacer big_spacer"></div>
+
+            <div class="meta white small_meta fragment">
+                The syntax looks like this:
+            </div>
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:150px;">
+                <pre class="language-markup" data-src="src_samples/array_syntax.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta">
+                Take this:
+            </div>
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:140px;">
+                <pre class="language-markup" data-src="src_samples/pre_array.js"></pre>
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+
+            <div class="meta white small_meta">
+                And turn it into this:
+            </div>
+
+            <div class="fragment meta white tiny_meta" style="height:150px;">
+                <pre class="language-markup" data-src="src_samples/post_array.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h4 class="white">
+                You can access items with <br /><span class="gold uppercase">bracket notation</span> by using the position of the item you want.
+            </h4>
+
+            <div class="spacer"></div>
+
+            <div class="meta fragment tiny_meta white">
+                Note: In Computer Science, we start counting at 0!
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta fragment">
+                What is the value of <span class="monaco_font gold">x</span>?
+            </div>
+
+            <div class="meta white small_meta fragment">
+                What is the value of <span class="monaco_font gold">y</span>?
+            </div>
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:150px;">
+                <pre class="language-markup" data-src="src_samples/access_array_items.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h4 class="white">
+                You can change the value of an item in an array using the same bracket notation.
+            </h4>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="fragment meta white tiny_meta" style="height:180px;">
+                <pre class="language-markup" data-src="src_samples/change_array_items.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h4 class="white">
+                You can add items to an existing array.
+            </h4>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:180px;">
+                <pre class="language-markup" data-src="src_samples/add_items.js"></pre>
+            </div>
+
+        </section>
+
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Detour to briefly introduce objects (functions vs methods) -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <section>
+            <h2 class="blue uppercase">quick detour...</h2>
+        </section>
+
+        <section>
+
+            <h3 class="blue">
+                Functions vs. Methods
+            </h3>
+
+            <div class="spacer big_spacer"></div>
+
+            <div class="meta white meta fragment">
+                JavaScript uses <span class="gold">OBJECTS</span>.
+            </div>
+
+            <div class="spacer big_spacer"></div>
+
+            <div class="meta white meta fragment">
+                Objects come with a set of functions that are specific for <i>them</i> to use. These are <span class="gold uppercase">methods</span>.
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white">
+                We've seen a few examples already:
+            </div>
+
+            <div class="fragment meta white tiny_meta skinny_pre">
+                <pre class="language-javascript"><code>window.alert();</code></pre>
+            </div>
+
+            <span class="spacer tiny_spacer"></span>
+
+            <div class="fragment meta white tiny_meta skinny_pre">
+                <pre class="language-javascript"><code>document.write();</code></pre>
+            </div>
+
+            <span class="spacer tiny_spacer"></span>
+
+            <div class="fragment meta white tiny_meta skinny_pre">
+                <pre class="language-javascript"><code>console.log();</code></pre>
+            </div>
+
+            <span class="spacer"></span>
+
+
+            <div class="meta white small_meta fragment">
+                <span class="monaco_font">window, document,</span> and <span class="monaco_font">console</span> are all <span class="gold">objects</span>.
+            </div>
+
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta fragment">
+                <span class="monaco_font">alert, write,</span> and <span class="monaco_font">log</span> are all <span class="gold">methods</span>.
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white">
+                Arrays, Strings, Integers, (and lots of others!) all come with several <span class="gold">methods</span> and <span class="gold">properties</span> specifically for their data types.
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white">
+                The concept of methods and functions are <br />very similar, but <span class="gold">functions</span> will not be called<br /> with the <span class="gold monaco_font">.</span> following the variable because <br /> they are not specific to the object.
+            </div>
+
+
+            <div class="fragment meta white tiny_meta">
+                <pre class="language-javascript"><code>getFullName("Amy", "Gebhardt"); // this is a function that takes 2 arguments.
+        myArray.push("a new item"); // this is an array method that takes 1 argument.</code></pre>
+            </div>
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white fragment">
+                When using an object <span class="gold">property</span> it will <br />not have <span class="gold monaco_font">( )</span> following the name.
+            </div>
+
+
+            <div class="fragment meta white tiny_meta">
+                <pre class="language-javascript"><code>var x = myArray.length; // set the value of x to the length of my_array accessed via the length property.</code></pre>
+            </div>
+
+
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta blue tiny_meta fragment">
+                Don't worry about this too much for now - we'll dive into objects more in depth later.
+            </div>
+
+        </section>
+
+        <section>
+
+            <h3 class="blue">
+                Back to arrays...
+            </h3>
+
+        </section>
+
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Back to Arrays... (part 2) -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->  
+
+        <section>
+
+            <h4 class="white">
+                You can add items to an existing array.
+            </h4>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:180px;">
+                <pre class="language-markup" data-src="src_samples/add_items.js"></pre>
+            </div>
+
+            <span class="fragment small_meta gold">
+                We're using the <span class="monaco_font white">push</span> method on our array.
+            </span>
+
+        </section>
+
+        <section>
+
+
+            <h4 class="white">
+                You can <span class="gold">iterate</span> through arrays.
+            </h4>
+
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:370px;">
+                <pre class="language-markup" data-src="src_samples/iterate_on_arrays.js"></pre>
+            </div>
+
+            <span class="fragment small_meta gold">
+                We're using the <span class="monaco_font white">length property</span> on our array <br /> to determine the condition
+                for our  <span class="monaco_font white">for loop</span>.
+            </span>
+
+        </section>
+
+        <section class="">
+
+            <h3 class="blue">
+                Let's try it!
+            </h3>
+
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta">
+                Return to your <span class="gold">scripts.js</span>.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta">
+                Create an array named <span class="monaco_font gold">fruits</span> & give it 3 of <br /> your favorite fruits.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta">
+                Display the first item in your array.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta">
+            Add a fourth fruit to your array.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta">
+                Using a <span class="monaco_font gold">for loop</span> and the <span class="monaco_font gold">length</span> property, iterate through <br />the items in your array and display each of them.
+            </div>
+
+            <div class="js_fiddle_link">
+                <div class="spacer"></div>
+                <a class="logo" href="http://jsfiddle.net/bmgp12xk/" target="_blank">See a solution</a>
+            </div>
+
+
+        </section>
+
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Objects -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->  
+        <section>
+            <h2 class="blue uppercase">Objects</h2>
+        </section>
+
+        <section>
+
+            <h4 class="white">
+                An <span class="gold uppercase">object</span> is a special variable that <br /> stores a collection of properties.
+            </h4>
+
+            <div class="spacer big_spacer"></div>
+
+            <div class="meta white small_meta fragment">
+                The syntax looks like this:
+            </div>
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:150px;">
+                <pre class="language-markup" data-src="src_samples/object_syntax.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h4 class="white">
+                The values in an <span class="gold uppercase">object</span> are written as name:value pairs.
+            </h4>
+
+            <div class="spacer"></div>
+
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:250px;">
+                <pre class="language-markup" data-src="src_samples/object_example.js"></pre>
+            </div>
+
+
+            <div class="meta white small_meta fragment">
+                Values in an object can be Strings, <br />Integers, Arrays, other Objects, etc.
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta">
+                To access a value within an object, you can use<br /> the same <span class="gold">bracket notation</span> that we used with arrays <br />or you can use <span class="gold">dot notation</span>.
+            </div>
+
+            <div class="spacer"></div>
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:410px;">
+                <pre class="language-markup" data-src="src_samples/object_access_data.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h3 class="blue">
+                Let's try it!
+            </h3>
+
+            <span class="spacer big_spacer"></span>
+
+            <div class="meta white meta">
+                Return to your <span class="gold">scripts.js</span>.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                Create a "person" object that has several <br />different key/value pairs.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                Display a few values using bracket notation.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                Display a few values using dot notation.
+            </div>
+
+            <div class="js_fiddle_link">
+                <div class="spacer"></div>
+                <a class="logo" href="http://jsfiddle.net/05ndx6fe/" target="_blank">See a solution</a>
+            </div>
+
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta">
+                Arrays can contain objects.
+            </div>
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:500px;">
+                <pre class="language-markup" data-src="src_samples/people_example.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta">
+                Values in objects can be changed.
+            </div>
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:540px;">
+                <pre class="language-markup" data-src="src_samples/changing_object_values.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta">
+                Key/Value pairs in objects can be added.
+            </div>
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:540px;">
+                <pre class="language-markup" data-src="src_samples/adding_values.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta">
+                Objects can also hold functions.
+            </div>
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:540px;">
+                <pre class="language-markup" data-src="src_samples/functions_in_objects.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta">
+                Here's a more complex example:
+            </div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:720px;">
+                <pre class="language-markup" data-src="src_samples/complex_functions_in_objects.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+
+            <h4 class="white">
+                All programming languages have <span class="gold uppercase">keywords</span>. These have special meaning in a particular context.
+            </h4>
+
+            <div class="spacer big_spacer"></div>
+
+            <div class="meta white small_meta fragment">
+                The <span class="gold uppercase">this</span> keyword acts like a variable.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta fragment">
+                Inside a function, the value of <span class="gold monaco_font">this</span> depends on how the function is called.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta fragment">
+                When a function is called as a <span class="gold">method</span> of an object, <span class="gold monaco_font">this</span> is set to the object the method is called on.
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta">
+                Here's a more complex example:
+            </div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:720px;">
+                <pre class="language-markup" data-src="src_samples/complex_functions_in_objects.js"></pre>
+            </div>
+
+        </section>
+
+        <section class="left_align">
+
+            <div class="meta white big_meta">
+                As we learned yesterday, JavaScript provides several built-in objects with a bunch of methods.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta fragment">
+                Can you think of any?
+            </div>
+
+            <div class="meta gold small_meta fragment monaco_font small_top_margin">Array</div>
+            <div class="meta gold small_meta fragment monaco_font small_top_margin">String</div>
+            <div class="meta gold small_meta fragment monaco_font small_top_margin">Document</div>
+            <div class="meta gold small_meta fragment monaco_font small_top_margin">Console</div>
+            <div class="meta gold small_meta fragment monaco_font small_top_margin">Number</div>
+            <div class="meta gold small_meta fragment monaco_font small_top_margin">Date</div>
+            <div class="meta gold small_meta fragment monaco_font small_top_margin">Math</div>
+
+        </section>
+
+        <section>
+
+            <h3 class="blue">
+                Let's try it!
+            </h3>
+
+            <span class="spacer big_spacer"></span>
+
+            <div class="meta white meta">
+                Return to your <span class="gold">scripts.js</span>.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                Create a "recipe" object. Track <span class="gold monaco_font">name</span>, <span class="gold monaco_font">prepTime</span>, and an array of <span class="gold monaco_font">ingredients</span>.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                Create a method that lists all of the ingredients.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                Don't forget to display your results somewhere!
+            </div>
+
+            <div class="js_fiddle_link">
+                <div class="spacer"></div>
+                <a class="logo" href="http://jsfiddle.net/g5ac3Lr8/" target="_blank">See a solution</a>
+            </div>
+
+        </section>
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Anatomy of a Website Review -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->  
+        <section>
+            <h2 class="blue uppercase">Anatomy of a Website Review</h2>
+        </section>
+
+        <section>
+
+            <div id="js_graphic" class=""></div>
+
+            <div class="spacer"></div><br />
+
+            <div class="meta white small_meta fragment">
+                <span class="gold uppercase">HTML</span> is the markup used to build the structure of your website.
+            </div>
+
+            <div class="spacer"></div>
+
+            <div class="meta white small_meta fragment">
+                An <span class="gold uppercase">element</span> is an individual component of HTML.
+            </div>
+
+            <div class="spacer"></div>
+
+            <div class="meta white small_meta fragment">
+                An <span class="gold uppercase">attribute</span> provides <br />additional info about the element.
+            </div>
+
+
+        </section>
+
+        <section>
+
+            <div id="js_graphic" class=""></div>
+
+            <div class="spacer"></div><br />
+
+            <div class="meta white small_meta fragment">
+                <span class="gold uppercase">CSS</span> defines how HTML elements should be displayed.
+            </div>
+
+            <div class="spacer"></div>
+
+            <div class="meta white small_meta fragment">
+                CSS <span class="gold uppercase">selectors</span> allow you to select/manipulate HTML elements.
+            </div>
+
+            <div class="spacer"></div>
+
+            <div class="meta white small_meta fragment">
+                Selectors find elements based on their <span class="gold uppercase">ID</span>,  <span class="gold uppercase">class</span>,  <span class="gold uppercase">type</span>, and more.
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white big_meta">
+                <span class="gold uppercase">IDs</span> <i>should</i> only apply to one element on a web page. The  <span class="gold monaco_font">#</span> is used
+                to refer to IDs.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white big_meta">
+                <span class="gold uppercase">Classes</span> can apply to lots of elements on a web page. The  <span class="gold monaco_font">.</span> is used to
+                refer to classes.
+            </div>
+
+        </section>
+
+        <section class="left_align">
+
+            <div class="meta blue big_meta">
+                What are some ways we could <span class="white">select</span> the <span class="white">div</span>?
+            </div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre" style="height:170px;">
+                <pre class="language-markup" data-src="src_samples/select_review.html"></pre>
+            </div>
+
+
+            <div class="meta white small_meta small_top_margin fragment">
+                div
+            </div>
+
+            <div class="meta white small_meta small_top_margin fragment">
+                #content
+            </div>
+
+            <div class="meta white small_meta small_top_margin fragment">
+                .girlDevelopIt
+            </div>
+
+            <div class="meta white small_meta small_top_margin fragment">
+                div.girlDevelopIt
+            </div>
+
+            <div class="meta white small_meta small_top_margin fragment">
+                #content.girlDevelopIt
+            </div>
+
+        </section>
+
+        <section>
+
+            <h4 class="white">
+                The <span class="gold uppercase">dom</span> (Document Object Model) models the <i>processed</i> nested structure of an HTML page.
+            </h4>
+
+            <section>
+
+                <div class="spacer"></div>
+
+                <div class="fragment meta white tiny_meta skinny_pre" style="height:250px;">
+                    <pre class="language-markup" data-src="src_samples/dom_review.html"></pre>
+                </div>
+
+            </section>
+
+            <section>
+
+                <div class="spacer"></div>
+                <div class="spacer big_spacer"></div>
+                <div class="spacer big_spacer"></div>
+
+                <img src="../images/dom_tree_final.png" style="width:70%;" class="img_blue_border">
+
+            </section>
+
+        </section>
+
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Maniuplating the DOM -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - --> 
+        <section>
+            <h2 class="blue uppercase">Manipulating the DOM</h2>
+        </section>
+
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Selecting Elements -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - --> 
+        <section>
+
+            <h4 class="white">
+                JavaScript can access and change <i>all</i> elements of an HTML document.
+            </h4>
+
+            <div class="spacer big_spacer"></div>
+
+            <div class="meta white small_meta fragment">
+                There are various <span class="gold">methods</span> and <span class="gold">properties</span> you can use
+                when accessing and changing the DOM in JavaScript.
+            </div>
+
+        </section>
+
+        <section>
+
+            <h4 class="white">
+                Our first <span class="gold">method</span> is <span class="gold monaco_font">getElementById</span>.
+            </h4>
+
+            <div class="meta white small_meta fragment small_top_margin">
+                <span class="gold">getElementId</span> is a method on the <span class="gold monaco_font">document</span> object.
+            </div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:350px;">
+                <pre class="language-markup" data-src="src_samples/getElementById.html"></pre>
+            </div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:720px;">
+                <pre class="language-markup" data-src="src_samples/getElementByIdJS.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h4 class="white">
+                Our first <span class="gold">property</span> is <span class="gold monaco_font">innerHTML</span>.
+            </h4>
+
+            <div class="meta white small_meta fragment small_top_margin">
+                <span class="gold">innerHTML</span> is a property of a selected element.<br />It can be read and changed.
+            </div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:360px;">
+                <pre class="language-markup" data-src="src_samples/innerHTML.html"></pre>
+            </div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:720px;">
+                <pre class="language-markup" data-src="src_samples/innerHTMLJS.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h3 class="blue">
+                Let's try it!
+            </h3>
+
+            <span class="spacer big_spacer"></span>
+
+            <div class="meta white meta">
+                Return to your <span class="gold">index.html</span>.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                Add a new div with an ID of <span class="monaco_font">girlDevelopIt</span>.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                Add some text to your new div.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                Return to your <span class="gold">scripts.js</span>.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                Display the contents of your girlDevelopIt div.
+            </div>
+
+            <div class="js_fiddle_link">
+                <div class="spacer"></div>
+                <a class="logo" href="http://jsfiddle.net/jk387c1k/" target="_blank">See a solution</a>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h4 class="white">
+                Our <span class="blue">document</span> object is the <span class="blue">DOM</span>.
+            </h4>
+
+            <div class="meta white tiny_meta fragment small_top_margin">
+                This object comes with several built-in methods. We just used <span class="gold monaco_font">getElementById()</span>.
+            </div>
+
+            <div class="meta white tiny_meta fragment small_top_margin">
+                There's also  <span class="gold monaco_font">getElementsByTagName()</span> and  <span class="gold monaco_font">getElementsByClassName()</span>
+            </div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:320px;">
+                <pre class="language-markup" data-src="src_samples/finding_html_elements.html"></pre>
+            </div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:720px;">
+                <pre class="language-markup" data-src="src_samples/finding_html_elements.js"></pre>
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h4 class="white">
+                Note the difference between the method names: <span class="gold monaco_font">element</span> vs <span class="gold monaco_font">elements</span>
+            </h4>
+
+            <div class="meta white tiny_meta fragment small_top_margin">
+                <span class="gold monaco_font">getElementsByTagName()</span> and <span class="gold monaco_font">getElementsByClassName()</span> return an
+                <span class="blue">array</span> of elements.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta fragment small_top_margin">
+                What do you think would happen if we tried to <br />access the <span class="gold">innerHTML</span> property on <span class="gold monaco_font">x</span>, <span class="gold monaco_font">y</span>, and <span class="gold monaco_font">z</span>?
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta small_top_margin">
+                We'll need to loop through <i>each</i> element and access the <span class="gold">innerHTML</span> property individually.
+            </div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:220px;">
+                <pre class="language-markup" data-src="src_samples/finding_html_elements_each.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h3 class="blue">
+                Let's try it!
+            </h3>
+
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                Return to your <span class="gold">index.html</span>.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta small_meta">
+                Add a few new elements (<span class="monaco_font pink">div</span>,
+                <span class="monaco_font pink">a</span>, <span class="monaco_font pink">strong</span>, etc) & give those some text/content.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta small_meta">
+                Return to your <span class="gold">scripts.js</span>.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta small_meta">
+                Display the contents of your elements using a
+                <span class="monaco_font pink">loop</span> and the
+                <span class="monaco_font pink">getElementsByTagName</span> /
+                <span class="monaco_font pink">getElementsByClassName</span> methods.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta tiny_meta">
+                Have some extra time? Try looking up
+                <span class="monaco_font pink">querySelector</span> and <span class="monaco_font pink">querySelectorAll</span><br />and give those a try!
+            </div>
+
+
+            <div class="js_fiddle_link">
+                <div class="spacer"></div>
+                <a class="logo" href="https://jsfiddle.net/ouqbaj11/" target="_blank">See a solution</a>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta small_top_margin">
+                You can change <span class="gold">attributes</span> on HTML elements.
+            </div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:220px;">
+                <pre class="language-markup" data-src="src_samples/update_attributes.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta small_top_margin">
+                You can change <span class="gold">style</span> on HTML elements.
+            </div>
+
+            <div class="meta white tiny_meta fragment small_top_margin">
+                For each CSS property, change the name to be <span class="gold">camelCase</span>.
+            </div>
+
+            <div class="spacer"></div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:220px;">
+                <pre class="language-markup" data-src="src_samples/update_style.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta small_top_margin">
+                You can create new HTML <br />elements and add them to the DOM.
+            </div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:260px;">
+                <pre class="language-markup" data-src="src_samples/adding_elements.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h3 class="blue">
+                Let's try it!
+            </h3>
+
+            <span class="spacer big_spacer"></span>
+
+            <div class="meta white meta">
+                Return to your <span class="gold">scripts.js</span>.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                Using JavaScript, change the size and color of the text in your <span class="monaco_font">girlDevelopIt</span> div.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <span class="spacer"></span>
+
+            <div class="left_align">
+
+
+            <div class="meta blue small_meta">
+                Finish early?
+            </div>
+
+            <div class="meta white small_meta">
+                Add some new text to your <span class="monaco_font">girlDevelopIt</span> div.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta">
+                Using a document method, display the contents of your girlDevelopIt div <i>before</i> and <i>after</i> you add your new text.
+            </div>
+            </div>
+
+            <div class="js_fiddle_link">
+                <div class="spacer"></div>
+                <a class="logo" href="http://jsfiddle.net/jk387c1k/2/" target="_blank">See a solution</a>
+            </div>
+
+        </section>
+
+
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Events -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - --> 
+        <section>
+            <h2 class="blue uppercase">Events</h2>
+        </section>
+
+        <section>
+
+            <h4 class="white">
+                JavaScript can react to HTML <span class="gold uppercase">events</span> such as
+                <span class="gold monaco_font">click</span> and <span class="gold monaco_font">change</span>.
+            </h4>
+
+            <div class="meta white tiny_meta fragment small_top_margin">
+                An event can be something the browser does or something the user does.
+            </div>
+
+        </section>
+
+        <section>
+
+            <h4 class="white">
+                There are <span class="gold">several</span> ways in JavaScript to respond to events.
+            </h4>
+
+            <h4 class="white">
+                One of the best ways to respond to events is to create <span class="gold">event listeners</span>.
+            </h4>
+
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:200px;">
+                <pre class="language-markup" data-src="src_samples/event_listeners.html"></pre>
+            </div>
+
+            <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:560px;">
+                <pre class="language-markup" data-src="src_samples/event_listeners.js"></pre>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h3 class="blue">
+                Let's try it!
+            </h3>
+
+            <span class="spacer big_spacer"></span>
+
+            <div class="meta white meta">
+                Return to your <span class="gold">scripts.js</span>.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                When your <span class="monaco_font">girlDevelopIt</span> div is clicked, change the color of the font.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="left_align">
+
+                <div class="meta blue small_meta">
+                    Finish early?
+                </div>
+
+                <div class="meta white meta">
+                    Every time your <span class="monaco_font">girlDevelopIt</span> div is clicked, increase the font size.
+                </div>
+
+            </div>
+
+            <div class="js_fiddle_link">
+                <div class="spacer"></div>
+                <a class="logo" href="http://jsfiddle.net/jk387c1k/4/" target="_blank">See a solution</a>
+            </div>
+
+        </section>
+
+
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Photo Gallery Project -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - --> 
+        <section>
+            <h2 class="blue uppercase">Photo Gallery</h2>
+        </section>
+
+        <section>
+
+            <div class="white small_meta">
+                You now have everything you need <br />to build a photo gallery like this:
+            </div>
+
+            <div class="fragment" style="height:500px;">
+
+                <div id="gallery">
+
+                    <div class="thumbnail"><img src="https://snap-photos.s3.amazonaws.com/img-thumbs/960w/TMYHLN7I7J.jpg" /></div>
+                    <div class="thumbnail"><img src="https://snap-photos.s3.amazonaws.com/img-thumbs/280h/Y0R3XXMNGZ.jpg" /></div>
+                    <div class="thumbnail"><img src="https://snap-photos.s3.amazonaws.com/img-thumbs/280h/ZN6L1ZT073.jpg" /></div>
+                    <div class="thumbnail"><img src="https://snap-photos.s3.amazonaws.com/img-thumbs/280h/SVKP65LN31.jpg" /></div>
+                    <div class="thumbnail"><img src="https://snap-photos.s3.amazonaws.com/img-thumbs/280h/16VYGB9PG5.jpg" /></div>
+
+                </div>
+
+                <div id="large_image"></div>
+
+            </div>
+
+
+        </section>
+
+        <section>
+            <h3 class="uppercase no_margin gold">get excited.</h3>
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta">
+                In <span class="gold">index.html</span> create 2 divs. To use my styles, make sure one has an ID of <span class="gold">gallery</span> and the other <span class="gold">large_image</span>:
+            </div>
+
+            <div class="fragment meta white tiny_meta skinny_pre" style="height:300px;">
+                <pre class="language-markup" data-src="src_samples/gallery/index2.html"></pre>
+            </div>
+
+            <div class="meta white small_meta fragment">
+                The thumbnails will be in the <span class="gold">gallery</span> div.
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta">
+                Return to <span class="gold">index.html</span>.
+            </div>
+
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta">
+                Now, create a bunch of thumbnails. Again, for the sake of the demo, use the following structure:
+            </div>
+
+            <div class="fragment meta white tiny_meta" style="height:400px;">
+                <pre class="language-markup" data-src="src_samples/gallery/index3.html"></pre>
+            </div>
+
+            <div class="meta white small_meta fragment">
+                Feel free to check it out in your browser.
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta">
+                Now for the fun part! Time to add some JavaScript.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white meta">
+                Return to your <span class="gold">scripts.js</span>.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta">
+                Using whichever <span class="gold">method</span> you prefer, find/select<br /> the <span class="blue monaco_font">large_image</span> div and
+                store it in a <span class="gold">variable</span>.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta">
+                Do the same for <i>all</i> <span class="blue monaco_font">thumbnail</span> divs.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta">
+                Do a quick test to ensure you've selected the right nodes. How can you test this?
+            </div>
+
+            <div class="js_fiddle_link">
+                <a class="logo" href="http://jsfiddle.net/n60qoudL/" target="_blank">See a solution</a>
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="meta white small_meta">
+                Now that we've got the right elements,<br />we need to do something with them.
+            </div>
+
+            <span class="spacer"></span>
+
+            <div class="meta big_meta blue">
+                What user interaction are we looking for?
+            </div>
+
+            <span class="spacer"></span>
+
+            <div class="meta big_meta blue fragment">
+                How can we tell when a user <br />clicks on a thumbnail?
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta fragment">
+                Set up a <span class="gold">click</span> event listener for <i>each</i> thumbnail node.
+            </div>
+
+            <span class="spacer"></span>
+
+            <div class="meta tiny_meta white fragment">
+                You'll need to use a <span class="gold">for loop</span>!
+            </div>
+
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta fragment">
+                Do a quick test to ensure you've captured <br />the event. How can you test this?
+            </div>
+
+            <div class="js_fiddle_link">
+                <a class="logo" href="http://jsfiddle.net/n60qoudL/1/" target="_blank">See a solution</a>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h4 class="blue">
+                Great! We're capturing the click event for each thumbnail.
+            </h4>
+
+            <span class="spacer"></span>
+
+            <div class="meta small_meta white fragment">
+                Next, we need to make the clicked image <br />appear in our <span class="gold monaco_font">large_image</span> div.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta small_meta white fragment">
+            Remember... we want to take the <span class="blue">contents (html)</span> <br />of our <span class="gold monaco_font">thumbnail</span> div and
+                replace the <br /><span class="blue">contents (html)</span> of our <span class="gold monaco_font">large_image</span> div.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta small_meta white fragment">
+                On the <span class="blue">click event listener</span> you just created for
+                each <br /><span class="monaco_font gold">thumbnail</span>, replace the HTML in the
+                <span class="gold monaco_font">large_image</span> div <br />with the thumbnail image.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta white small_meta fragment">
+                Test your work!
+            </div>
+
+            <div class="js_fiddle_link">
+                <br /><br />
+                <a class="logo" href="http://jsfiddle.net/n60qoudL/2/" target="_blank">See a solution</a>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h4 class="blue">
+                Let's be over-achievers.
+            </h4>
+
+            <span class="spacer"></span>
+
+
+            <div class="meta small_meta white fragment">
+                To really make this a solid gallery, we'll want to make a thumnbail appear selected.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta small_meta white fragment">
+                In the stylesheet you're using, there is a <span class="gold monaco_font">selected_thumb</span> ID.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta small_meta white fragment">
+                When a user clicks on a thumbnail, in addition to making it the large image, <i>select</i> the thumbnail
+                by giving it the <span class="gold monaco_font">selected_thumb</span> ID.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta small_meta white fragment">
+                Do you anticipate any problems with this? <br />
+                <i class="tiny_meta">Hint: you will run into something!</i>
+            </div>
+
+            <div class="js_fiddle_link">
+                <br /><br />
+                <a class="logo" href="http://jsfiddle.net/n60qoudL/4/" target="_blank">See a solution</a>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h4 class="blue">
+                Ahh, that's right.
+            </h4>
+
+            <span class="spacer"></span>
+
+            <div class="meta small_meta white fragment">
+                If there is already a selected thumbnail, we need to remove the ID from that element <i>before</i> we
+                add it to our newly selected element.
+            </div>
+
+            <span class="spacer"></span>
+            <span class="divider"></span>
+            <span class="spacer"></span>
+
+            <div class="meta small_meta white fragment">
+            Finish up this last step, and your gallery will be complete!
+            </div>
+
+            <div class="js_fiddle_link">
+                <br /><br />
+                <a class="logo" href="http://jsfiddle.net/n60qoudL/5/" target="_blank">See a solution</a>
+            </div>
+
+        </section>
+
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Closing -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - --> 
+        <section>
+            <h2 class="blue uppercase monaco_font">window.alert(<span class='white'>"You are champions!"</span>);</h2>
+        </section>
+
+        <section class="left_align">
+
+            <h2 class="blue uppercase">Thanks for coming!</h2>
+
+            <div class="spacer"></div>
+
+            <div class="meta big_meta pink">
+                We love your feedback!
+            </div>
+
+            <div class="meta white small_meta small_top_margin">
+                tinyurl.com/gdi-js <span class="blue">|</span> <span class="gold">Use course name "Intro to JS"</span>
+            </div>
+
+            <div class="spacer big_spacer"></div>
+
+            <div class="meta tiny_meta white">
+                Take the survey before you go, and you'll have a chance to win a prize!
+            </div>
+
+        </section>
+
+
+    </div>
+
+    <footer>
+
+        <div id="twitter">
+            <img src="../images/twitter.png">
+            @GDImpls &#8729; @amlyhamm &#8729; #introToJS
+        </div>
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>
