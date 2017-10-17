@@ -111,6 +111,7 @@
 /* - - - Colors - - - */
 
 #gdi .blue { color: #b3e3f1 !important; }
+#gdi .background { color: rgba(49,84,105,1); !important; }
 #gdi .gold { color: #ecbe6d !important; }
 #gdi .white { color:#fff !important; }
 #gdi .pink { color:#FDD2D2 !important; }
@@ -170,11 +171,10 @@
     padding:2.5%;
     border-radius:20px;
     box-shadow:0 0 5px rgba(50,50,50,0.8);
-    margin:1em;
+    margin:1em 0;
     text-align:left;
     line-height:1.25em;
-    width:110%;
-    margin-left:-10%;
+    width:95%;
 }
 
 #gdi .skinny_pre pre {

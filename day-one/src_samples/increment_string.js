@@ -1,4 +1,4 @@
-var cake = "I like cake";
+var cake = "I love cake";
 var pops = "pops";
 
 console.log(cake); // logs "I like cake"

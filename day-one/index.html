@@ -26,11 +26,11 @@
 
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <!-- Introduction -->
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
 
                     <h3 class="uppercase no_margin">Intro to JavaScript</h3>
-                    <div class="meta blue uppercase small_meta">03.04.17 &#8729; GDI MPLS &#8729; Amy Gebhardt</div>
+                    <div class="meta blue uppercase small_meta">11.11.17 &#8729; GDI MPLS &#8729; Rachel Walwood</div>
                     <img src="../images/gdi_logo_badge.png" class="top_margin width_50" style="width:30%;">
 
                     <div class="spacer"></div>
@@ -59,10 +59,13 @@
 
                 <section class="left_align">
 
-                    <h3 class="no_margin gold">Welcome!</h3>
+                    <h3 class="no_margin gold">Let's get to know each other!</h3>
 
                     <div class="fragment meta white small_meta">Who are you?</div>
-                    <div class="fragment meta white small_meta">What do you do?</div>
+                    <div class="fragment meta white small_meta">What's your favorite thing to do with your time?</div>
+                    <div class="fragment meta white small_meta">What do you do with most of your time?
+                      <span class="pink tiny_meta">(work, school, caretaking, etc)</span>
+                    </div>
                     <div class="fragment meta white small_meta">Do you have any experience with JavaScript or programming?</div>
 
                 </section>
@@ -78,6 +81,7 @@
                     </div>
 
                     <div class="blue meta">
+                      <!-- TODO: change this -->
                         https://gdiminneapolis.github.io/intro-to-js/day-one/index.html
                     </div>
 
@@ -105,9 +109,9 @@
                     <h3 class="uppercase no_margin gold">get excited.</h3>
                 </section>
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <!-- What is JavaScript? -->
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
 
                     <div class="spacer"></div>
@@ -123,7 +127,7 @@
                             A <span class="gold">client-side</span><br />processing language.
                         </div>
 
-                        <div class="spacer small_spacer"></div>
+                        <div class="spacer"></div>
 
                         <div class="fragment meta white">
                             The <span class="gold">browser</span> reads and executes the code.
@@ -145,11 +149,30 @@
 
                     </section>
 
+                    <section class="left_align">
+
+                        <!-- TODO: put in the graphic that represents a non-locking web experience -->
+                        <div id="js_graphic" class="fragment"></div>
+
+                        <div class="spacer"></div>
+
+                        <div class="fragment meta white">Enables you to build <span class="gold">web applications</span> that:</div>
+
+                        <div class="spacer"></div>
+
+                        <div class="indented fragment small_meta pink">load new content without re-loading the page</div>
+                        <div class="spacer small_spacer"></div>
+                        <div class="indented fragment small_meta pink">send data without locking the page</div>
+                        <div class="spacer small_spacer"></div>
+                        <div class="indented fragment small_meta pink">live and move and breathe</div>
+
+                    </section>
+
                 </section>
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <!-- First Code (setting up project files, text editor, + hello world example) -->
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
 
                     <h3 class="no_margin blue">Your first JavaScript code.</h3>
@@ -164,22 +187,23 @@
 
                     <div class="fragment meta white small_meta">
                         If you have not done so yet, download our project files from: <span class="gold">https://gdiminneapolis.github.io/intro-to-js/</span>
+                        <span class="spacer"></span>
+                        <span class="divider"></span>
+                        <span class="spacer"></span>
                     </div>
 
-                    <span class="spacer"></span>
-                    <span class="divider"></span>
-                    <span class="spacer"></span>
 
                     <div class="fragment meta white small_meta">
-                        Open Atom or Sublime Text, then open your <span class="gold">gdiIntroToJS</span> directory.
+                        Open Atom or Sublime Text, then open your <span class="gold">gdiIntroToJS</span> directory
+                        <span class="pink tiny_meta">(we call 'folders' directories)</span>.
+                        <span class="spacer"></span>
+                        <span class="divider"></span>
+                        <span class="spacer"></span>
                     </div>
 
-                    <span class="spacer"></span>
-                    <span class="divider"></span>
-                    <span class="spacer"></span>
 
                     <div class="fragment meta white small_meta">
-                        Open this file in Google Chrome. Anything exciting?
+                        Open the <span class="gold">index.html</span> file in Google Chrome. Anything exciting?
                     </div>
 
                 </section>
@@ -187,9 +211,13 @@
                 <section>
 
                     <div class="fragment meta white small_meta">
-                        Add your JavaScript to the <span class="gold">&lt;head&gt;</span> & save again:
+                        Let's add some JavaScript!
+                    </div>
+                    <div class="fragment meta white small_meta">
+                        Type the following into the <span class="gold">&lt;head&gt;</span> & save:
                     </div>
 
+                    <!-- TODO: double check that the data-src is working -->
                     <div class="fragment" style="height:385px;">
                         <pre class="language-markup" data-src="src_samples/first_js_code_html2.html"></pre>
                         <div style="clear:both;"></div>
@@ -212,13 +240,38 @@
                     <span class="spacer"></span>
 
                     <div class="fragment small_meta white">
+                        We targeted an <span class="gold">object</span> in broswer called <span class="pink">window</span>.
+                        <span class="spacer small_spacer"></span><div class="tiny_meta indented">
+                          <span class="blue">window.</span>
+                          <span class="background">alert(</span>
+                          <span class="background">"hello world"</span>
+                          <span class="background">)</span>
+                        </div>
+                    </div>
+
+                    <span class="spacer small_spacer"></span>
+                    <div class="fragment small_meta white">
                         We used a <span class="gold">function</span> named <span class="pink">alert</span>.
+                        <span class="spacer small_spacer"></span>
+                        <div class="tiny_meta indented">
+                          <span class="background">window.</span>
+                          <span class="blue">alert(</span>
+                          <span class="background">"hello world"</span>
+                          <span class="blue">)</span>
+                        </div>
                     </div>
 
                     <span class="spacer small_spacer"></span>
 
                     <div class="fragment small_meta white">
                         We gave the <span class="gold">function</span> a  <span class="gold">string</span> <span class="gold">parameter</span>: <span class="pink">"hello world"</span>.
+                        <span class="spacer small_spacer"></span>
+                        <div class="tiny_meta indented">
+                          <span class="background">window.</span>
+                          <span class="background">alert(</span>
+                          <span class="blue">"hello world"</span>
+                          <span class="background">)</span>
+                        </div>
                     </div>
 
                     <span class="spacer big_spacer"></span>
@@ -240,9 +293,9 @@
 
                 </section>
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <!-- External Files -->
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
 
                     <h4 class="blue">
@@ -261,22 +314,22 @@
 
                     <div class="fragment meta white tiny_meta">
                         Confirm that you see a <span class="gold">scripts.js</span> file in your <span class="gold">gdiIntroToJS</span> directory.
+                        <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
                     </div>
 
-                    <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
 
                     <div class="fragment meta white tiny_meta">
                         Open <span class="gold">index.html</span>, and remove the <span class="gold">&lt;script&gt;</span> tag and its contents.
+                        <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
                     </div>
 
-                    <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
 
                     <div class="fragment meta white tiny_meta">
                         Just above the <span class="gold">&lt;/body&gt;</span> tag, add a new <span class="gold">&lt;script&gt;&lt;/script&gt;</span><br />with a <span class="gold">src</span> attribute
                         linking to your <span class="gold">scripts.js</span> file.
+                        <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
                     </div>
 
-                    <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
 
                     <div class="fragment meta white tiny_meta">
                         Your <span class="gold">index.html</span> should now look like (don't forget to save!):
@@ -289,7 +342,10 @@
 
                     <span class="spacer"></span>
 
-                    <div class="fragment meta white tiny_meta" style="position:absolute;width:20%;bottom:10%;right:10%;">
+                    <!-- TODO: check the placement of the script tag on this example -->
+                    <div
+                      class="fragment meta white tiny_meta" style="position:absolute;width:20%;bottom:10%;right:10%;"
+                    >
                         Refresh your page in Google Chrome. Any guesses on what we'll see?
                     </div>
 
@@ -312,33 +368,33 @@
 
                 </section>
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
-                <!-- Displaying Data Review -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- Displaying Data Review -->
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                  <section>
 
                     <h4 class="blue">
-                        Now we know 2 ways of displaying <br />data in JavaScript.
+                        Now we know 2 essential ways of displaying <br />data in JavaScript.
                     </h4>
 
                     <span class="spacer"></span>
 
                     <div class="fragment meta white small_meta">
-                        The last one (for now) requires us to use our "dev tools".
+                        Our third method requires us to use our "developer tools".
                     </div>
 
                 </section>
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
-                <!-- Intro to Dev Tools -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- Intro to Dev Tools -->
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
 
                     <h4 class="blue">
                         Open your Google Chrome DevTools.
+                        <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
                     </h4>
 
-                    <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
 
                     <div class="fragment meta white small_meta">
                         View -> Developer -> Developer Tools
@@ -347,10 +403,10 @@
                     <span class="spacer"></span>
 
                     <div class="fragment meta white small_meta">
-                        Open the "console" tab
+                        Click on "Javascript Console" or click the "console" tab
+                        <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
                     </div>
 
-                    <span class="spacer"></span><span class="divider"></span><span class="spacer"></span>
 
                     <div class="fragment meta gold small_meta">
                         Or, if you prefer shortcuts:<br />
@@ -378,9 +434,17 @@
                         These tools - specifically the console - is your new best friend.
                     </h4>
 
-                    <div class="meta gold small_meta">
+                    <!-- debugging is a forein concept at this point -->
+                    <!-- <div class="meta gold small_meta">
                         Debugging just got a whole lot easier.
+                    </div> -->
+                    <div class="fragment meta gold small_meta">
+                        You can use the console to program in JavaScript without <br />
+                         any setup, which makes it great for:
                     </div>
+                    <div class="fragment meta pink small_meta">checking how things work</div>
+                    <div class="fragment meta pink small_meta">experimenting</div>
+                    <div class="fragment meta pink small_meta">poking around</div>
 
                 </section>
 
@@ -403,8 +467,8 @@
                 </section>
 
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
-                <!-- Using the Console -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- Using the Console -->
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
 
@@ -429,11 +493,11 @@
 
                     <div class="meta white meta">
                         Return to <span class="gold">scripts.js</span> and remove the<br /> line with our intentional bug.
+                        <span class="spacer"></span>
+                        <span class="divider"></span>
+                        <span class="spacer"></span>
                     </div>
 
-                    <span class="spacer"></span>
-                    <span class="divider"></span>
-                    <span class="spacer"></span>
 
                     <div class="fragment">
                         <div class="meta white meta">
@@ -444,10 +508,10 @@
                             <pre class="language-markup" data-src="src_samples/console_hello.js"></pre>
                             <div style="clear:both;"></div>
                         </div>
+                        <span class="divider"></span>
+                        <span class="spacer"></span>
                     </div>
 
-                    <span class="divider"></span>
-                    <span class="spacer"></span>
 
                     <div class="fragment meta white small_meta">
                         Save the file, then refresh your page in Google Chrome.<br />Any guesses on what we'll see?
@@ -489,8 +553,8 @@
                 </section>
 
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
-                <!-- Basic Programming Vocab -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- Basic Programming Vocab -->
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
 
@@ -510,7 +574,9 @@
                         Syntax varies <span class="blue">significantly</span> from language to language.
                     </div>
 
-                    <div class="spacer big_spacer"></div>
+                  </section>
+
+                  <section>
 
                     <div class="meta white fragment">
                         A <span class="gold">STATEMENT</span> is an instruction.
@@ -524,14 +590,14 @@
                     <div class="spacer big_spacer"></div>
 
                     <div class="meta white meta fragment">
-                        JavaScript syntax requires each <br /> statement to end with a <span class="gold uppercase">semicolon</span>.
+                        JavaScript syntax requires each <br /> statement to end with a <span class="gold">semicolon</span>.
                     </div>
 
                 </section>
 
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
-                <!-- Code Comments -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- Code Comments -->
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
                     <h2 class="blue uppercase">code comments</h2>
@@ -564,8 +630,8 @@
                 </section>
 
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
-                <!-- Variables -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- Variables -->
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
                     <h2 class="blue uppercase">variables</h2>
@@ -701,17 +767,17 @@
 
                         <tr>
                             <td>First Name</td>
-                            <td>Amy</td>
+                            <td>Rachel</td>
                         </tr>
 
                         <tr>
                             <td>Twitter Handle</td>
-                            <td>@amlyhamm</td>
+                            <td>@walwoodr</td>
                         </tr>
 
                         <tr>
                             <td>Birthday Month</td>
-                            <td>8</td>
+                            <td>2</td>
                         </tr>
 
                         <tr>
@@ -849,17 +915,17 @@
 
                         <tr>
                             <td>First Name</td>
-                            <td>Amy</td>
+                            <td>Rachel</td>
                         </tr>
 
                         <tr>
                             <td>Twitter Handle</td>
-                            <td>@amlyhamm</td>
+                            <td>@walwoodr</td>
                         </tr>
 
                         <tr>
                             <td>Birthday Month</td>
-                            <td>8</td>
+                            <td>2</td>
                         </tr>
 
                         <tr>
@@ -943,8 +1009,8 @@
                 </section>
 
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
-                <!-- Operators -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- Operators -->
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
                     <h2 class="blue uppercase">operators</h2>
@@ -1157,8 +1223,8 @@
                 </section>
 
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
-                <!-- Functions -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- Functions -->
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
                     <h2 class="blue uppercase">functions</h2>
@@ -1338,8 +1404,8 @@
                 </section>
 
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
-                <!-- Scope -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- Scope -->
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
                     <h2 class="blue uppercase">scope</h2>
@@ -1476,8 +1542,8 @@
                 </section>
 
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
-                <!-- Conditionals -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- Conditionals -->
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
                     <h2 class="blue uppercase">conditional statements</h2>
@@ -1561,7 +1627,9 @@
                         </table>
 
                     </section>
+                  </section>
 
+                  <section>
                     <section>
                         <div class="spacer"></div>
 
@@ -1877,8 +1945,8 @@
                 </section>
 
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
-                <!-- Logical Operators -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- Logical Operators -->
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
                     <h2 class="blue uppercase">logical operators</h2>
@@ -1887,11 +1955,14 @@
                 <section>
 
                     <h4 class="white">
-                        <span class="gold uppercase">logical operators</span> determine what happens between variables or values.
+                        <span class="gold uppercase">logical operators</span> allow us to reason about data in more involved ways than a single conditional.
                     </h4>
 
                     <div class="spacer"></div>
 
+                    <div class="meta white small_meta fragment">Some logical operators combine multiple conditional statements and return a value based on those conditions.</div>
+
+                    <div class="spacer"></div>
 
                     <div class="meta white small_meta fragment">
                         Given that:
@@ -1929,15 +2000,54 @@ b = 2;</pre>
                             <td><span class="monaco_font fragment">false</span>
                         </tr>
 
-                        <tr>
-                            <td>!</td>
-                            <td>Not</td>
-
-                            <td>!(a == b)</td>
-                            <td><span class="monaco_font fragment">true</span>
-                        </tr>
-
                     </table>
+
+                </section>
+
+                <section>
+
+                    <h4 class="white">
+                        The <span class="gold uppercase">bang</span> operator is also a logical operator.
+                    </h4>
+
+                    <div class="spacer"></div>
+
+                    <div class="meta white small_meta fragment">
+                        Using an exclaimation mark will give you the <span class="gold">opposite</span> of the <span class="pink">boolean</span> value of the variable.
+                    </div>
+
+                    <div class="spacer"></div>
+
+                    <div class="fragment">
+                      <table class="wide_table">
+
+                          <tr class="header_row">
+                              <td>Value</td>
+                              <td>Result</td>
+                          </tr>
+
+                          <tr>
+                              <td>!true</td>
+                              <td><span class="monaco_font fragment">false</span></td>
+                          </tr>
+
+                          <tr>
+                            <td>!(1 == 3)</td>
+                            <td><span class="monaco_font fragment">true</span></td>
+                          </tr>
+
+                          <tr>
+                              <td>!'hat'</td>
+                              <td><span class="monaco_font fragment">false</span></td>
+                          </tr>
+
+                          <tr>
+                              <td>!null</td>
+                              <td><span class="monaco_font fragment">true</span></td>
+                          </tr>
+
+                      </table>
+                    </div>
 
                 </section>
 
@@ -1959,8 +2069,8 @@ b = 2;</pre>
 
 
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
-                <!-- Loops -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- Loops -->
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
                     <h2 class="blue uppercase">loops</h2>
@@ -2150,8 +2260,8 @@ b = 2;</pre>
                 </section>
 
 
-                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->                
-                <!-- End of Day One -->               
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!-- End of Day One -->
                 <!-- - - - - - - - - - - - - - - - - - - - - - - - -->
                 <section>
                     <h2 class="blue uppercase">Questions?</h2>
@@ -2163,7 +2273,7 @@ b = 2;</pre>
 
                 <div id="twitter">
                     <img src="../images/twitter.png">
-                    @GDImpls &#8729; @amlyhamm &#8729; #introToJS
+                    @GDImpls &#8729; @walwoodr &#8729; #introToJS
                 </div>
 
             </footer>

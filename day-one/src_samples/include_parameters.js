@@ -4,5 +4,5 @@ function logName(firstName, lastName) {
     console.log(firstName + " " + lastName);
 }
 
-// Call logName with "Amy" and "Gebhardt" as arguments
-logName("Amy", "Gebhardt");
+// Call logName with "Rachel" and "Walwood" as arguments
+logName("Rachel", "Walwood");

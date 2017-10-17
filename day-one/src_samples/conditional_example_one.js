@@ -6,9 +6,8 @@ function logName(name) {
     }
 }
 
-logName("Amy"); // logs "Amy" in the console.
+logName("Rachel"); // logs "Rachel" in the console.
 
 shouldLog = false;
 
-logName("Amy"); // nothing happens.
-
+logName("Rachel"); // nothing happens.
