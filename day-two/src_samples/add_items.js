@@ -1,4 +1,4 @@
-var myFavoriteShows = ["Breaking Bad", "How I Met Your Mother"];
+var myFavoriteShows = ["Master of None", "Big Little Lies"];
 
 // use the array "push" method:
-myFavoriteShows.push("Parks & Rec");
+myFavoriteShows.push("Black Mirror");

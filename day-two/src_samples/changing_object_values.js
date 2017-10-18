@@ -1,11 +1,11 @@
 var people = [
     {
-        "firstName": "Amy",
-        "lastName": "Hammond"
+        "firstName": "Rachel",
+        "lastName": "Walberg"
     },
     {
-        "firstName": "Rick",
-        "lastName": "Gebhardt"
+        "firstName": "Amanda",
+        "lastName": "Underwood"
     }
 ];
 
@@ -13,8 +13,8 @@ function getFullName(person){
     return person["firstName"] + " " + person["lastName"];
 }
 
-console.log(getFullName(people[0])); // logs "Amy Hammond"
+console.log(getFullName(people[0])); // logs "Rachel Walberg"
 
-people[0]["lastName"] = "Gebhardt";
+people[0]["lastName"] = "Walwood";
 
-console.log(getFullName(people[0])); // logs "Amy Gebhardt"
+console.log(getFullName(people[0])); // logs "Rachel Walwood"

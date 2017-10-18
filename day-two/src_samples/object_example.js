@@ -1,7 +1,7 @@
 var person = {
-    "firstName": "Amy",
-    "lastName": "Gebhardt",
-    "eyeColor": "Brown",
+    "firstName": "Rachel",
+    "lastName": "Walwood",
+    "eyeColor": "Blue",
     "profession": "Software Developer",
-    "hobbies": ["Code", "Ultimate Frisbee", "Making Cake Pops"]
+    "hobbies": ["Yoga", "Playing with my pup", "Knitting"]
 };

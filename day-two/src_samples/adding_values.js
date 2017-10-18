@@ -1,10 +1,10 @@
 var person = {
-    "firstName": "Amy",
-    "lastName": "Gebhardt"
+    "firstName": "Rachel",
+    "lastName": "Walwood"
 };
 
 console.log(person.maidenName); // logs "undefined"
 
-person.maidenName = "Hammond";
+person.maidenName = "Walberg";
 
-console.log(person.maidenName); // logs "Hammond"
+console.log(person.maidenName); // logs "Walberg"

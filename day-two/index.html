@@ -30,13 +30,14 @@
         <section>
 
             <h3 class="uppercase no_margin">Intro to JavaScript</h3>
-            <div class="meta blue uppercase small_meta">03.05.17 &#8729; GDI MPLS &#8729; Amy Gebhardt</div>
+            <div class="meta blue uppercase small_meta">03.05.17 &#8729; GDI MPLS &#8729; Rachel Walwood</div>
             <img src="../images/gdi_logo_badge.png" class="top_margin width_50" style="width:30%;">
 
             <div class="spacer"></div>
 
             <div class="left_align">
 
+                // TODO: Add this info
                 <div class="meta white big_meta uppercase">Wifi</div>
                 <div class="meta gold small_meta">Network: <span class="white"></span></div>
                 <div class="meta gold small_meta">Password: <span class="white"></span></div>
@@ -62,7 +63,7 @@
             </div>
 
             <div class="blue meta">
-                https://gdiminneapolis.github.io/intro-to-js/day-two/index.html
+                http://www.rachelwalwood.com/gdi/intro-to-js/day-two/index.html
             </div>
 
         </section>
@@ -100,7 +101,7 @@
         <section>
 
             <h4 class="white">
-                An <span class="gold uppercase">array</span> is a special variable that <br />can old multiple values of varying data types at a time.
+                An <span class="gold uppercase">array</span> is a special variable that <br />can hold multiple values of varying data types at a time.
             </h4>
 
             <div class="spacer big_spacer"></div>
@@ -118,16 +119,16 @@
         <section>
 
             <div class="meta white small_meta">
-                Take this:
+                Arrays allow us to take this:
             </div>
 
             <div class="fragment meta white tiny_meta skinny_pre" style="height:140px;">
                 <pre class="language-markup" data-src="src_samples/pre_array.js"></pre>
-            </div>
 
-            <span class="spacer"></span>
-            <span class="divider"></span>
-            <span class="spacer"></span>
+                <span class="spacer"></span>
+                <span class="divider"></span>
+                <span class="spacer"></span>
+            </div>
 
 
             <div class="meta white small_meta">
@@ -150,22 +151,26 @@
 
             <div class="meta fragment tiny_meta white">
                 Note: In Computer Science, we start counting at 0!
+
+                <span class="spacer"></span>
+                <span class="divider"></span>
+                <span class="spacer"></span>
             </div>
 
-            <span class="spacer"></span>
-            <span class="divider"></span>
-            <span class="spacer"></span>
-
-            <div class="meta white small_meta fragment">
-                What is the value of <span class="monaco_font gold">x</span>?
-            </div>
-
-            <div class="meta white small_meta fragment">
-                What is the value of <span class="monaco_font gold">y</span>?
+            <div class="meta white tiny_meta fragment">
+                Given:
             </div>
 
             <div class="fragment meta white tiny_meta skinny_pre" style="height:150px;">
                 <pre class="language-markup" data-src="src_samples/access_array_items.js"></pre>
+            </div>
+
+            <div class="meta white small_meta fragment">
+              What is the value of <span class="monaco_font gold">x</span>?
+            </div>
+
+            <div class="meta white small_meta fragment">
+              What is the value of <span class="monaco_font gold">y</span>?
             </div>
 
         </section>
@@ -283,12 +288,13 @@
 
 
             <div class="fragment meta white tiny_meta">
-                <pre class="language-javascript"><code>getFullName("Amy", "Gebhardt"); // this is a function that takes 2 arguments.
-        myArray.push("a new item"); // this is an array method that takes 1 argument.</code></pre>
+                <pre class="language-javascript"><code>
+getFullName("Rachel", "Walwood"); // this is a function that takes 2 arguments.
+myArray.push("a new item"); // this is an array method that takes 1 argument.</code></pre>
+              <span class="spacer"></span>
+              <span class="divider"></span>
+              <span class="spacer"></span>
             </div>
-            <span class="spacer"></span>
-            <span class="divider"></span>
-            <span class="spacer"></span>
 
             <div class="meta white fragment">
                 When using an object <span class="gold">property</span> it will <br />not have <span class="gold monaco_font">( )</span> following the name.
@@ -296,14 +302,12 @@
 
 
             <div class="fragment meta white tiny_meta">
-                <pre class="language-javascript"><code>var x = myArray.length; // set the value of x to the length of my_array accessed via the length property.</code></pre>
+                <pre class="language-javascript"><code>var x = myArray.length;
+// set the value of x to the length of my_array accessed via the length property.</code></pre>
+                <span class="spacer"></span>
+                <span class="divider"></span>
+                <span class="spacer"></span>
             </div>
-
-
-
-            <span class="spacer"></span>
-            <span class="divider"></span>
-            <span class="spacer"></span>
 
             <div class="meta blue tiny_meta fragment">
                 Don't worry about this too much for now - we'll dive into objects more in depth later.
@@ -577,6 +581,7 @@
                 Here's a more complex example:
             </div>
 
+            // TODO: Change this
             <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:720px;">
                 <pre class="language-markup" data-src="src_samples/complex_functions_in_objects.js"></pre>
             </div>
@@ -594,19 +599,19 @@
 
             <div class="meta white small_meta fragment">
                 The <span class="gold uppercase">this</span> keyword acts like a variable.
-            </div>
 
-            <span class="spacer"></span>
-            <span class="divider"></span>
-            <span class="spacer"></span>
+                <span class="spacer"></span>
+                <span class="divider"></span>
+                <span class="spacer"></span>
+            </div>
 
             <div class="meta white small_meta fragment">
                 Inside a function, the value of <span class="gold monaco_font">this</span> depends on how the function is called.
-            </div>
 
-            <span class="spacer"></span>
-            <span class="divider"></span>
-            <span class="spacer"></span>
+                <span class="spacer"></span>
+                <span class="divider"></span>
+                <span class="spacer"></span>
+            </div>
 
             <div class="meta white small_meta fragment">
                 When a function is called as a <span class="gold">method</span> of an object, <span class="gold monaco_font">this</span> is set to the object the method is called on.
@@ -617,11 +622,11 @@
         <section>
 
             <div class="meta white small_meta">
-                Here's a more complex example:
+                Here's an example:
             </div>
 
             <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:720px;">
-                <pre class="language-markup" data-src="src_samples/complex_functions_in_objects.js"></pre>
+                <pre class="language-markup" data-src="src_samples/this_example.js"></pre>
             </div>
 
         </section>
@@ -995,7 +1000,7 @@
         <section>
 
             <div class="meta white small_meta small_top_margin">
-                We'll need to loop through <i>each</i> element and access the <span class="gold">innerHTML</span> property individually.
+                For the Arrays, we'll need to loop through <i>each</i> element and access the <span class="gold">innerHTML</span> property individually.
             </div>
 
             <div class="fragment meta white tiny_meta tiny_font_pre skinny_pre" style="height:220px;">

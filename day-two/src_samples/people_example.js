@@ -1,11 +1,11 @@
 var people = [
     {
-        "firstName": "Amy",
-        "lastName": "Gebhardt"
+        "firstName": "Rachel",
+        "lastName": "Walberg"
     },
     {
-        "firstName": "Rick",
-        "lastName": "Gebhardt"
+        "firstName": "Amanda",
+        "lastName": "Underwood"
     }
 ];
 

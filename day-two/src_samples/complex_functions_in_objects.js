@@ -1,7 +1,7 @@
 var course = {
     "name": "Intro to JavaScript",
-    "teacher": "Amy Gebhardt",
-    "location": "PowerObjects",
+    "teacher": "Rachel Walwood",
+    "location": "ILM",
     "tas": [
         {"firstName": "Michelle", "lastName": "Schulp"},
         {"firstName": "Clare", "lastName": "Oneil"},

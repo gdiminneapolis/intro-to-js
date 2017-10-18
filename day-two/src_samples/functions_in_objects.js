@@ -1,13 +1,13 @@
-var stitchTheCat = {
-    "age": 11,
-    "furColor": "gray",
-    "meow": function(){
-        console.log("meowwww");
+var willaTheDog = {
+    "age": 2,
+    "furColor": "brown",
+    "bark": function(){
+        console.log("ruff");
     },
     "eat": function(food){
         console.log("Yummm, I sure love " + food);
     }
 };
 
-stitchTheCat.meow();
-stitchTheCat.eat("chocolate protein shake");
+willaTheDog.bark();
+willaTheDog.eat("ham");

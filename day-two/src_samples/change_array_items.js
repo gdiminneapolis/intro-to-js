@@ -1,5 +1,5 @@
-var myFavoriteThings = ["Cakepops", "Coffee", "Reading a book"];
-console.log(myFavoriteThings); // logs ["Cakepops", "Coffee", "Reading a book"]
+var myFavoriteThings = ["Knitting", "Tea", "Reading a book"];
+console.log(myFavoriteThings); // logs ["Knitting", "Tea", "Reading a book"]
 
-myFavoriteThings[2] = "Watching NetFlix";
-console.log(myFavoriteThings); // logs ["Cakepops", "Coffee", "Watching NetFlix"]
+myFavoriteThings[2] = "Going for a run";
+console.log(myFavoriteThings); // logs ["Knitting", "Tea", "Going for a run"]
